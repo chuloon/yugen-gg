@@ -26,6 +26,15 @@ namespace yugen_gg
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/assets/styles").Include(
+                      "~/content/assets/css/core.css",
+                      "~/content/assets/css/components.css",
+                      "~/content/assets/css/colors.css"));
+
+            bundles.Add(new ScriptBundle("~/Content/assets/scripts").Include(
+                "~/content/assets/js/plugins/loaders/pace.min.js",
+                "~/content/assets/js/plugins/loaders/blockui.min.js"));
         }
     }
 }
