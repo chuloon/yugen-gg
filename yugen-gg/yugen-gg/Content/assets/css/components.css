@@ -1661,7 +1661,7 @@ body[class*=navbar-bottom] .footer:not(.navbar) {
   user-select: none;
 }
 .pace .pace-progress {
-  background: #81C784;
+  background: #fcb437;
   position: fixed;
   z-index: 2000;
   top: 0;
