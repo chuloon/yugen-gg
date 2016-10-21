@@ -1,0 +1,17 @@
+﻿.yugen-nav {
+    background-image: url("/content/img/layout/header.jpg");
+    background-position: center;
+    height: 75px;
+}
+
+#menu-items li a {
+    background-color: #fcb437;
+    margin-right: 25px;
+    font-family: 'Bebas';
+    padding: 10px 40px;
+    font-size: 1.3em;
+}
+
+#menu-items {
+    margin-top: 45px;
+}

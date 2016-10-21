@@ -25,7 +25,8 @@ namespace yugen_gg
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/css/layout.css"));
 
             bundles.Add(new StyleBundle("~/Content/assets/styles").Include(
                       "~/content/assets/css/core.css",
@@ -33,7 +34,6 @@ namespace yugen_gg
                       "~/content/assets/css/colors.css"));
 
             bundles.Add(new ScriptBundle("~/Content/assets/scripts").Include(
-                "~/content/assets/js/plugins/loaders/pace.min.js",
                 "~/content/assets/js/plugins/loaders/blockui.min.js"));
         }
     }
