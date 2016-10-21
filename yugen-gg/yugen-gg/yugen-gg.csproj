@@ -2277,6 +2277,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\layout.css" />
     <Content Include="Content\img\layout\header.jpg" />
+    <Content Include="Content\img\layout\logo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

@@ -1,7 +1,11 @@
 ﻿.yugen-nav {
     background-image: url("/content/img/layout/header.jpg");
     background-position: center;
-    height: 75px;
+    height: 100px;
+}
+
+.yugen-logo {
+    width: 175px;
 }
 
 #menu-items li a {
@@ -13,5 +17,5 @@
 }
 
 #menu-items {
-    margin-top: 45px;
+    margin-top: 75px;
 }

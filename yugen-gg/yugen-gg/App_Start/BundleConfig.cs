@@ -34,6 +34,7 @@ namespace yugen_gg
                       "~/content/assets/css/colors.css"));
 
             bundles.Add(new ScriptBundle("~/Content/assets/scripts").Include(
+                "~/content/assets/js/plugins/loaders/pace.min.js",
                 "~/content/assets/js/plugins/loaders/blockui.min.js"));
         }
     }
