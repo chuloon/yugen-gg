@@ -8,6 +8,8 @@ namespace yugen_gg
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            BundleTable.EnableOptimizations = false;
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -23,10 +25,10 @@ namespace yugen_gg
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Content/stylesheets").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/css/layout.css"));
+                      "~/Content/stylesheets/layout.css"));
 
             bundles.Add(new StyleBundle("~/Content/assets/styles").Include(
                       "~/content/assets/css/core.css",

@@ -81,18 +81,6 @@ C:\git\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.csprojResolveAssemblyRefere
 C:\git\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.dll
 C:\git\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.pdb
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\ApplicationInsights.config
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\csc.exe
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.CodeAnalysis.dll
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.CSharp.Core.targets
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.VisualBasic.Core.targets
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\System.Collections.Immutable.dll
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\System.Reflection.Metadata.dll
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\vbc.exe
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\VBCSCompiler.exe
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\VBCSCompiler.exe.config
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll.config
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.pdb
@@ -109,7 +97,6 @@ F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.ApplicationInsights.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Core.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Owin.dll
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Host.SystemWeb.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Cookies.dll
@@ -135,7 +122,6 @@ F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.ServerTelemetryChannel.xml
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.Web.xml
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.WindowsServer.xml
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.ApplicationInsights.xml
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Helpers.xml
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Mvc.xml
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Optimization.xml
@@ -159,6 +145,9 @@ F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.OAuth.xml
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Google.xml
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Twitter.xml
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.csprojResolveAssemblyReference.cache
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.pdb
+F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Abstractions.dll
+F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Routing.dll
+F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll.CodeAnalysisLog.xml
+F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll.lastcodeanalysissucceeded
