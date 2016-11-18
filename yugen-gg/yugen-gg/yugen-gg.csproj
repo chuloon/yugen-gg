@@ -2274,6 +2274,9 @@
     <Content Include="Content\assets\swf\handsontable\zero_clipboard.swf" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\index\logo-large.png" />
+    <Content Include="Content\img\index\example-event.jpg" />
+    <Content Include="Content\stylesheets\index.css" />
     <Content Include="Content\stylesheets\layout.css" />
     <Content Include="Content\img\layout\header.jpg" />
     <Content Include="Content\img\layout\logo.png" />

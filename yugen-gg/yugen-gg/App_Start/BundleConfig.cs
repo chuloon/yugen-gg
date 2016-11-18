@@ -37,7 +37,8 @@ namespace yugen_gg
 
             bundles.Add(new ScriptBundle("~/Content/assets/scripts").Include(
                 "~/content/assets/js/plugins/loaders/pace.min.js",
-                "~/content/assets/js/plugins/loaders/blockui.min.js"));
+                "~/content/assets/js/plugins/loaders/blockui.min.js",
+                "~/content/assets/js/plugsins/ui/ripple.min.js"));
         }
     }
 }

@@ -149,5 +149,4 @@ F:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.pdb
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Abstractions.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Routing.dll
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll.CodeAnalysisLog.xml
-F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll.lastcodeanalysissucceeded
+F:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.csprojResolveAssemblyReference.cache

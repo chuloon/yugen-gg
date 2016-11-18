@@ -7,6 +7,12 @@
     @Styles.Render("~/Content/stylesheets")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/assets/styles")
+
+    @if (IsSectionDefined("AddToHead"))
+    {
+        @RenderSection("AddToHead", required: false)
+    }
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top yugen-nav">
@@ -28,7 +34,7 @@
             @*@Html.Partial("_LoginPartial")*@
         </div>
     </div>
-    <div class="container body-content" style="margin-top: 50px;">
+    <div class="body-content" style="margin-top: 50px;">
         @RenderBody()
         <hr />
         <footer>

@@ -1,0 +1,29 @@
+﻿#title-section {
+    background-color: #415ba6;
+    padding: 30px;
+}
+
+#events-section {
+    background-color: #ef3b4f;
+    padding: 60px;
+}
+
+#title-section .highlights-button {
+    background-color: #fcb437;
+    border: 2px solid white;
+    border-radius: 0px;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+}
+
+.section-separator {
+    height: 20px;
+}
+
+.event-panel {
+    padding: 0px;
+}
+
+.event-panel-body {
+    padding-top: 15px;
+}
