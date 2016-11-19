@@ -8,7 +8,12 @@
     padding: 60px;
 }
 
-#title-section .highlights-button {
+#social-media-section {
+    background-color: #415ba6;
+    padding: 60px;
+}
+
+.highlights-button {
     background-color: #fcb437;
     border: 2px solid white;
     border-radius: 0px;
@@ -26,4 +31,42 @@
 
 .event-panel-body {
     padding-top: 15px;
+}
+
+#event-body-image {
+    height: 600px;
+    background-color: green;
+}
+
+.view-all-text {
+    font-family: 'Bebas';
+    letter-spacing: 2px;
+    margin-top: 0px;
+}
+
+#social-media-header {
+    color: white;
+}
+
+.sm-cta {
+    color: white;
+    margin-top: 30px;
+}
+
+.sm-cta h4 {
+    margin-bottom: 0px;
+}
+
+.sm-cta p {
+    letter-spacing: 2px;
+}
+
+#email-textbox {
+    display: inline-block;
+}
+
+.highlights-button.email-button {
+    font-size: 1em;
+    padding: 6px 15px;
+    letter-spacing: 2px;
 }

@@ -1,16 +1,4 @@
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\ApplicationInsights.config
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\csc.exe
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\System.Collections.Immutable.dll
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\System.Reflection.Metadata.dll
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\vbc.exe
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\VBCSCompiler.exe
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\roslyn\VBCSCompiler.exe.config
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll.config
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.pdb
@@ -27,7 +15,6 @@ C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.ApplicationInsights.dll
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Core.dll
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.dll
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Cookies.dll
@@ -53,7 +40,6 @@ C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.Web.xml
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.WindowsServer.xml
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.ApplicationInsights.xml
-C:\git\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Helpers.xml
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Mvc.xml
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Optimization.xml
@@ -150,3 +136,5 @@ F:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.pdb
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Abstractions.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Routing.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.csprojResolveAssemblyReference.cache
+C:\git\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Abstractions.dll
+C:\git\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Routing.dll

@@ -20,7 +20,7 @@ namespace yugen_gg
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
-
+        
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
@@ -38,7 +38,10 @@ namespace yugen_gg
             bundles.Add(new ScriptBundle("~/Content/assets/scripts").Include(
                 "~/content/assets/js/plugins/loaders/pace.min.js",
                 "~/content/assets/js/plugins/loaders/blockui.min.js",
-                "~/content/assets/js/plugsins/ui/ripple.min.js"));
+                "~/content/assets/js/plugins/forms/inputs/typeahead/handlebars.min.js",
+                "~/content/assets/js/plugins/forms/inputs/alpaca/alpaca.min.js",
+                "~/content/assets/js/plugsins/ui/ripple.min.js"
+                ));
         }
     }
 }

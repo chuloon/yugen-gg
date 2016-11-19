@@ -3,6 +3,19 @@
     font-family: 'Bebas';
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas';
+    letter-spacing: 2px !important;
+}
+
+.primary-yellow-text {
+    color: #fcb437;
+}
+
+.primary-violet-text {
+    color: #415ba6;
+}
+
 .panel {
     border-radius: 0px;
 }
@@ -32,4 +45,17 @@
 
 #menu-items {
     margin-top: 75px;
+}
+
+input.alpaca-control {
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-bottom-color: #fcb437 !important;
+    box-shadow: 0 1px #fcb437 !important;
+}
+
+.form-control {
+    box-shadow: 0 1px white !important;
 }

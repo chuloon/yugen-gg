@@ -2,18 +2,93 @@
     ViewBag.Title = "Home";
 }
 
-<div class="row">
-    <div class="col-md-6">
-        <div id="event-panel">
-            EVENT PANEL
+@section AddToHead {
+    <link type="text/css" rel="stylesheet" href="~/Content/stylesheets/index.css" />
+}
+
+<div id="title-section" class="row">
+    <div class="col-md-6 col-md-offset-3 col-xs-12">
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <img src="~/Content/img/index/logo-large.png" width="100%" />
+            </div>
         </div>
-    </div>
-    <div class="col-md-6">
-        <div id="highlights-panel">
-            HIGHLIGHTS PANEL
-        </div>
-        <div id="social-panel">
-            SOCIAL MEDIA PANEL
+        <div class="row">
+            <div class="col-xs-12">
+                <button type="button" class="btn btn-primary highlights-button pull-right">HIGHLIGHTS</button>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="row section-separator"></div>
+
+<div id="events-section" class="row">
+    <div id="event-list" class="col-xs-12 col-md-3">
+        <div class="panel">
+            <div class="panel-body event-panel">
+                <div class="row">
+                    <div class="col-xs-4"><img src="~/Content/img/index/example-event.jpg" class="img-responsive" height="100" /></div>
+                    <div class="col-xs-8 event-panel-body">
+                        Hello world
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel" style="opacity: 0.3">
+            <div class="panel-body event-panel">
+                <div class="row">
+                    <div class="col-xs-4"><img src="~/Content/img/index/example-event.jpg" class="img-responsive" height="100" /></div>
+                    <div class="col-xs-8 event-panel-body">
+                        Hello world
+                    </div>
+                </div>
+            </div>
+        </div><div class="panel" style="opacity: 0.3">
+            <div class="panel-body event-panel">
+                <div class="row">
+                    <div class="col-xs-4"><img src="~/Content/img/index/example-event.jpg" class="img-responsive" height="100" /></div>
+                    <div class="col-xs-8 event-panel-body">
+                        Hello world
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<h3 class="view-all-text pull-right">VIEW ALL</h3>*@
+    </div>
+    <div id="event-body" class="hidden-xs col-md-9">
+        <div class="panel row">
+            <div class="panel-body event-panel">
+                <div id="event-body-image" class="col-xs-4">
+
+                </div>
+                <div class="col-xs-8 event-panel-body">
+                    Test
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row section-separator"></div>
+
+<div id="social-media-section" class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <h1 id="social-media-header">Get in on the action now!</h1>
+        <div class="sm-cta">
+            <h4>Want to get more Yugen?</h4>
+            <p>Make sure you don't miss a thing by following us on Twitter, Facebook, and email updates!</p>
+            <div id="email-textbox"></div>
+            <button type="button" class="btn btn-primary highlights-button email-button">Level Up</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#email-textbox").alpaca({
+        "options": {
+            "placeholder": "email address",
+            "focus": false
+        }
+    });
+</script>
