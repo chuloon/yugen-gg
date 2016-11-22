@@ -1,7 +1,31 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+@section AddToHead {
+    <link type="text/css" rel="stylesheet" href="~/Content/stylesheets/about.css" />
+}
+
+<div id="page-header" class="row">
+    <div class="col-xs-12">
+        <h1 class="pull-right page-header-text"><span class="page-header-decoration">//</span>About Yugen</h1>
+    </div>
+</div>
+<div id="about-section" class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <h1 class="about-title">Who we are</h1>
+
+        <p class="secondary-font about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel egestas purus. Curabitur tempus turpis non tristique euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia justo vitae odio pellentesque, et consectetur dui tincidunt. Nullam at sodales est. Nulla facilisi. Duis pulvinar augue vel erat molestie, sed facilisis lorem rutrum. Phasellus elementum sagittis euismod. Maecenas risus erat, vulputate id risus ut, ultrices ornare felis. Suspendisse tellus turpis, euismod non nulla vitae, mollis pellentesque eros.</p>
+        <p class="secondary-font about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur justo ligula, a convallis erat dapibus sed. Etiam tincidunt sollicitudin lacus, in egestas justo tristique in. Nullam congue sollicitudin diam, sit amet luctus felis efficitur vitae. Nulla tristique pulvinar diam, quis commodo libero varius quis. Nam iaculis pulvinar est, eget varius ipsum. Etiam eu velit quis augue facilisis ornare.</p>
+        <p class="secondary-font about-text">Sed eleifend tempor egestas. Etiam eget felis quis tortor aliquet placerat sed nec mi. Nunc elit nisl, feugiat eget nibh vitae, volutpat posuere sapien. Quisque scelerisque, erat vitae consequat ornare, ante turpis luctus ante, id varius nulla est sit amet neque. Pellentesque pretium mattis sem nec sollicitudin. Donec in commodo quam. Aenean scelerisque molestie sem id auctor. In hac habitasse platea dictumst. In hac habitasse platea dictumst. Fusce laoreet elit nec faucibus molestie.</p>
+    </div>
+</div>
+
+<div class="row section-separator"></div>
+
+<div id="join-yugen" class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <h3 class="about-title">Want to get in touch with us? Let's talk, we don't bite (often)!</h3>
+        <p>A contact form will go here eventually</p>
+    </div>
+</div>

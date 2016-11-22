@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 2px !important;
 }
 
+.secondary-font {
+    font-family: 'Montserrat';
+}
+
 .primary-yellow-text {
     color: #fcb437;
 }
@@ -59,4 +63,21 @@ input.alpaca-control {
 
 .form-control {
     box-shadow: 0 1px white !important;
+}
+
+#page-header {
+    border-bottom: 4px solid #ef3b4f;
+}
+
+.page-header-decoration {
+    color: #ef3b4f;
+}
+
+.page-header-text {
+    margin-bottom: 0px;
+    color: #415ba6;
+}
+
+.section-separator {
+    height: 20px;
 }

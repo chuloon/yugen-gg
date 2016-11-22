@@ -1,0 +1,58 @@
+﻿#events-header {
+    background-color: #1abece;
+    padding: 30px;
+}
+
+#events-header h1 {
+    color: white;
+}
+
+#event-list {
+    background-color: #415ba6;
+    padding: 30px;
+}
+
+.event-panel {
+    padding: 0px;
+}
+
+.event-panel-body {
+    padding-top: 15px;
+}
+
+.event-header {
+    background-size: 100% auto;
+    background-position: center 85%;
+    height: 200px;
+    display: table;
+    cursor: pointer;
+}
+
+.event-header-text {
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.event-header-text h1, .event-header-text h3 {
+    margin: 5px;
+}
+
+.event-information {
+    margin: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.register-line {
+    background-color: #fcb437;
+}
+
+.register-button {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    color: white;
+}

@@ -25,7 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -2279,6 +2279,7 @@
     <Content Include="Content\img\index\example-event-body.jpg" />
     <Content Include="Content\img\index\logo-large.png" />
     <Content Include="Content\img\index\example-event.jpg" />
+    <Content Include="Content\stylesheets\about.css" />
     <Content Include="Content\stylesheets\index.css" />
     <Content Include="Content\stylesheets\layout.css" />
     <Content Include="Content\img\layout\header.jpg" />
@@ -2614,7 +2615,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Events.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
