@@ -2280,6 +2280,7 @@
     <Content Include="Content\img\index\logo-large.png" />
     <Content Include="Content\img\index\example-event.jpg" />
     <Content Include="Content\stylesheets\about.css" />
+    <Content Include="Content\stylesheets\events.css" />
     <Content Include="Content\stylesheets\index.css" />
     <Content Include="Content\stylesheets\layout.css" />
     <Content Include="Content\img\layout\header.jpg" />

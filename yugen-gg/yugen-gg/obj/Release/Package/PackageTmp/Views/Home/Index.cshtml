@@ -78,17 +78,9 @@
         <div class="sm-cta">
             <h4>Want to get more Yugen?</h4>
             <p>Make sure you don't miss a thing by following us on Twitter, Facebook, and email updates!</p>
-            <div id="email-textbox"></div>
-            <button type="button" class="btn btn-primary highlights-button email-button">Level Up</button>
+            <input id="email-textbox" type="text" class="alpaca-control form-control" placeholder="email address" data-bind="value: $data.emailText" />
+            <button type="button" class="btn btn-primary highlights-button email-button" data-bind="click: $data.mailingClick">Level Up</button>
         </div>
     </div>
 </div>
-
-<script>
-    $("#email-textbox").alpaca({
-        "options": {
-            "placeholder": "email address",
-            "focus": false
-        }
-    });
-</script>
+<script type="text/javascript" src="~/Scripts/Pages/Index.js"></script>
