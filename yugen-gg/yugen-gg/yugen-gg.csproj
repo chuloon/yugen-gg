@@ -2276,7 +2276,12 @@
     <Content Include="Content\assets\swf\handsontable\zero_clipboard.swf" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\index\casters.jpg" />
+    <Content Include="Content\img\index\people-at-computers.jpg" />
+    <Content Include="Content\img\index\header.jpg" />
     <Content Include="Content\img\index\example-event-body.jpg" />
+    <Content Include="Content\img\index\hearthstone-logo.png" />
+    <Content Include="Content\img\index\hearthstone-event.jpg" />
     <Content Include="Content\img\index\logo-large.png" />
     <Content Include="Content\img\index\example-event.jpg" />
     <Content Include="Content\stylesheets\about.css" />

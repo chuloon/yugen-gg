@@ -1,3 +1,23 @@
+var events = ko.observable();
+var eventsArray = ko.observableArray();
+var mainEventData = {
+    mainEventHeader: ko.observable(),
+    mainEventTitle: ko.observable(),
+    date: ko.observable(),
+    longDescription: ko.observable()
+};
+$().ready(function () {
+    return firebase.database().ref('/events/').once('value').then(function (result) {
+        events(result.val());
+        $.each(events(), function (index, item) {
+            eventsArray.push(item);
+        });
+        mainEventData.mainEventHeader(eventsArray()[0].eventHeader);
+        mainEventData.mainEventTitle(eventsArray()[0].name);
+        mainEventData.date(eventsArray()[0].date);
+        mainEventData.longDescription(eventsArray()[0].longDescription);
+    });
+});
 $("#email-textbox").alpaca({
     "options": {
         "placeholder": "email address",
@@ -9,7 +29,6 @@ function indexViewModel() {
     var self = this;
     self.emailText = ko.observable("");
     this.mailingClick = function () {
-        debugger;
         var userId = self.emailText().replace(/[^a-zA-Z1-9 ]/g, "");
         try {
             if (self.emailText() != "" && self.emailText().match("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?") != null) {
@@ -25,6 +44,14 @@ function indexViewModel() {
         }
         catch (ex) {
         }
+    };
+    this.eventClick = function (params) {
+        mainEventData.mainEventHeader(params.eventHeader);
+        mainEventData.mainEventTitle(params.name);
+        mainEventData.date(params.date);
+        mainEventData.longDescription(params.longDescription);
+        $('.active-event').addClass('inactive-event').removeClass('active-event');
+        $('#' + params.id).removeClass('inactive-event').addClass('active-event');
     };
 }
 ko.applyBindings(new indexViewModel());
