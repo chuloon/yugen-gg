@@ -12,6 +12,7 @@
     color: white;
 }
 
-.about-text {
+.about-body p {
+    font-family: 'Montserrat';
     color: white;
 }

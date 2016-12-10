@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="~/Content/img/layout/favicon.ico" type="image/x-icon" />
+
     <title>@ViewBag.Title | Yugen</title>
     @Styles.Render("~/Content/stylesheets")
     @Scripts.Render("~/bundles/modernizr")
@@ -35,16 +38,16 @@
         firebase.initializeApp(config);
 
 
-        let email = 'ben.ng@outlook.com';
-        let password = 'ben0531'
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
+        //let email = 'ben.ng@outlook.com';
+        //let password = 'ben0531'
+        //firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+        //    // Handle Errors here.
+        //    var errorCode = error.code;
+        //    var errorMessage = error.message;
 
-            console.log('Error logging into database.');
-            // ...
-        });
+        //    console.log('Error logging into database.');
+        //    // ...
+        //});
     </script>
     <div class="navbar navbar-inverse navbar-fixed-top yugen-nav">
         <div class="navbar-header pull-right">
