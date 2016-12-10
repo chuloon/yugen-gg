@@ -28,7 +28,8 @@ namespace yugen_gg
             bundles.Add(new StyleBundle("~/Content/stylesheets").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/stylesheets/layout.css"));
+                      "~/Content/stylesheets/layout.css",
+                      "~/Content/assets/css/font-awesome/css/font-awesome.min.css"));
 
             bundles.Add(new StyleBundle("~/Content/assets/styles").Include(
                       "~/content/assets/css/core.css",

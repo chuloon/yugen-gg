@@ -38,6 +38,12 @@
         firebase.initializeApp(config);
 
     </script>
+    <script src="~/Scripts/Pages/Site.js"></script>
+    <!-- ko if: isBusy -->
+    <div class="is-busy">
+        <i class="fa fa-circle-o-notch fa-spin fa-10x fa-fw"></i>
+    </div>
+    <!-- /ko -->
     <div class="navbar navbar-inverse navbar-fixed-top yugen-nav">
         <div class="navbar-header pull-right">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -56,7 +62,7 @@
             @*@Html.Partial("_LoginPartial")*@
         </div>
     </div>
-    <div class="body-content" style="margin-top: 50px;">
+    <div class="body-content" style="margin-top: 100px;">
         @RenderBody()
         <hr />
         <footer>

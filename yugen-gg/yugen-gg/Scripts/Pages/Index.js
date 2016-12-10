@@ -5,9 +5,11 @@ var mainEventData = {
     mainEventTitle: ko.observable(),
     date: ko.observable(),
     longDescription: ko.observable(),
-    locationShort: ko.observable()
+    locationShort: ko.observable(),
+    id: ko.observable()
 };
 $().ready(function () {
+    isBusy(true);
     return firebase.database().ref('/events/').once('value').then(function (result) {
         events(result.val());
         $.each(events(), function (index, item) {
@@ -18,6 +20,8 @@ $().ready(function () {
         mainEventData.date(eventsArray()[0].date);
         mainEventData.longDescription(eventsArray()[0].longDescription);
         mainEventData.locationShort(eventsArray()[0].locationShort);
+        mainEventData.id(eventsArray()[0].id);
+        isBusy(false);
     });
 });
 $("#email-textbox").alpaca({
@@ -53,8 +57,12 @@ function indexViewModel() {
         mainEventData.date(params.date);
         mainEventData.longDescription(params.longDescription);
         mainEventData.locationShort(params.locationShort);
+        mainEventData.id(params.id);
         $('.active-event').addClass('inactive-event').removeClass('active-event');
         $('#' + params.id).removeClass('inactive-event').addClass('active-event');
+    };
+    this.registerClick = function (params) {
+        window.location.href = "/Register/" + params();
     };
 }
 ko.applyBindings(new indexViewModel());

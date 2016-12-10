@@ -7,11 +7,13 @@ let mainEventData = {
     mainEventTitle: ko.observable<string>(),
     date: ko.observable<string>(),
     longDescription: ko.observable<string>(),
-    locationShort: ko.observable<string>()
+    locationShort: ko.observable<string>(),
+    id: ko.observable<string>()
 };
 
 
 $().ready(() => {
+    isBusy(true);
     return firebase.database().ref('/events/').once('value').then((result) => {
         events(result.val());
         $.each(events(), (index, item) => {
@@ -23,6 +25,8 @@ $().ready(() => {
         mainEventData.date((<any>eventsArray()[0]).date);
         mainEventData.longDescription((<any>eventsArray()[0]).longDescription);
         mainEventData.locationShort((<any>eventsArray()[0]).locationShort);
+        mainEventData.id((<any>eventsArray()[0]).id);
+        isBusy(false);
     });
 });
 
@@ -65,9 +69,14 @@ function indexViewModel() {
         mainEventData.date(params.date);
         mainEventData.longDescription(params.longDescription);
         mainEventData.locationShort(params.locationShort);
+        mainEventData.id(params.id);
 
         $('.active-event').addClass('inactive-event').removeClass('active-event');
         $('#' + params.id).removeClass('inactive-event').addClass('active-event');
+    }
+
+    this.registerClick = (params: any) => {
+        window.location.href = "/Register/" + params();
     }
 
 }
