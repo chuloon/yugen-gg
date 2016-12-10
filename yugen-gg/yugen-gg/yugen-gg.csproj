@@ -2284,6 +2284,7 @@
     <Content Include="Content\img\index\hearthstone-event.jpg" />
     <Content Include="Content\img\index\logo-large.png" />
     <Content Include="Content\img\index\example-event.jpg" />
+    <Content Include="Content\img\layout\favicon.ico" />
     <Content Include="Content\stylesheets\about.css" />
     <Content Include="Content\stylesheets\events.css" />
     <Content Include="Content\stylesheets\index.css" />

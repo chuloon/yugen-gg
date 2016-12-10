@@ -6,7 +6,8 @@ let mainEventData = {
     mainEventHeader: ko.observable<string>(),
     mainEventTitle: ko.observable<string>(),
     date: ko.observable<string>(),
-    longDescription: ko.observable<string>()
+    longDescription: ko.observable<string>(),
+    locationShort: ko.observable<string>()
 };
 
 
@@ -21,6 +22,7 @@ $().ready(() => {
         mainEventData.mainEventTitle((<any>eventsArray()[0]).name);
         mainEventData.date((<any>eventsArray()[0]).date);
         mainEventData.longDescription((<any>eventsArray()[0]).longDescription);
+        mainEventData.locationShort((<any>eventsArray()[0]).locationShort);
     });
 });
 
@@ -62,6 +64,7 @@ function indexViewModel() {
         mainEventData.mainEventTitle(params.name);
         mainEventData.date(params.date);
         mainEventData.longDescription(params.longDescription);
+        mainEventData.locationShort(params.locationShort);
 
         $('.active-event').addClass('inactive-event').removeClass('active-event');
         $('#' + params.id).removeClass('inactive-event').addClass('active-event');

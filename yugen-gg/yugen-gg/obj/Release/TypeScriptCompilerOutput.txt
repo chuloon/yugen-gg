@@ -10,3 +10,5 @@ D:\Yugen\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Index.js
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Index.js.map
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Index.js
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Index.js.map
+D:\Yugen\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Index.js
+D:\Yugen\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Index.js.map

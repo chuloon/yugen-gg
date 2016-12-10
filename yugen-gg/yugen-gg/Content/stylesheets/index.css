@@ -23,6 +23,16 @@
     letter-spacing: 3px;
 }
 
+.register-button {
+    margin-top: 20px;
+}
+
+.main-event-panel {
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 .event-panel {
     padding: 0px;
 }
@@ -32,7 +42,7 @@
 }
 
 #event-body-image {
-    height: 600px;
+    min-height: 600px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.298039) 0%, rgba(0, 0, 0, 0.298039) 100%), url("/Content/img/index/hearthstone-event.jpg");
     background-position: 50% 100%;
 }

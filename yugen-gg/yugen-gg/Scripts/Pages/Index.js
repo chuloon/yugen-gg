@@ -4,7 +4,8 @@ var mainEventData = {
     mainEventHeader: ko.observable(),
     mainEventTitle: ko.observable(),
     date: ko.observable(),
-    longDescription: ko.observable()
+    longDescription: ko.observable(),
+    locationShort: ko.observable()
 };
 $().ready(function () {
     return firebase.database().ref('/events/').once('value').then(function (result) {
@@ -16,6 +17,7 @@ $().ready(function () {
         mainEventData.mainEventTitle(eventsArray()[0].name);
         mainEventData.date(eventsArray()[0].date);
         mainEventData.longDescription(eventsArray()[0].longDescription);
+        mainEventData.locationShort(eventsArray()[0].locationShort);
     });
 });
 $("#email-textbox").alpaca({
@@ -50,6 +52,7 @@ function indexViewModel() {
         mainEventData.mainEventTitle(params.name);
         mainEventData.date(params.date);
         mainEventData.longDescription(params.longDescription);
+        mainEventData.locationShort(params.locationShort);
         $('.active-event').addClass('inactive-event').removeClass('active-event');
         $('#' + params.id).removeClass('inactive-event').addClass('active-event');
     };
