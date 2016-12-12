@@ -59,7 +59,7 @@
                             <span data-bind="text: mainEventData.locationShort"></span>
                         </div>
                         <div class="col-xs-4">
-                            <button class="btn btn-primary highlights-button register-button pull-right">Register</button>
+                            <button class="btn btn-primary highlights-button register-button pull-right" data-bind="click: function(){ $data.registerClick(mainEventData.id) }">Register</button>
                         </div>
                     </div>
 

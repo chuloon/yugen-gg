@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="google-site-verification" content="Hc9av-FfqHpvFO9tZEdA17SFsOXtlizeElpmeCP_SdY" />
     <link rel="shortcut icon" href="~/Content/img/layout/favicon.ico" type="image/x-icon" />
 
     <title>@ViewBag.Title | Yugen</title>
@@ -26,6 +26,7 @@
     }
 </head>
 <body>
+   
     <script>
         // Initialize Firebase
         var config = {
@@ -37,18 +38,13 @@
         };
         firebase.initializeApp(config);
 
-
-        //let email = 'ben.ng@outlook.com';
-        //let password = 'ben0531'
-        //firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
-        //    // Handle Errors here.
-        //    var errorCode = error.code;
-        //    var errorMessage = error.message;
-
-        //    console.log('Error logging into database.');
-        //    // ...
-        //});
     </script>
+    <script src="~/Scripts/Pages/Site.js"></script>
+    <!-- ko if: isBusy -->
+    <div class="is-busy">
+        <i class="fa fa-circle-o-notch fa-spin fa-10x fa-fw"></i>
+    </div>
+    <!-- /ko -->
     <div class="navbar navbar-inverse navbar-fixed-top yugen-nav">
         <div class="navbar-header pull-right">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -67,7 +63,7 @@
             @*@Html.Partial("_LoginPartial")*@
         </div>
     </div>
-    <div class="body-content" style="margin-top: 50px;">
+    <div class="body-content" style="margin-top: 100px;">
         @RenderBody()
         <hr />
         <footer>

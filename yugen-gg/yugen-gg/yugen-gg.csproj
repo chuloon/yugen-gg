@@ -199,6 +199,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -219,6 +220,9 @@
     <Content Include="Content\assets\css\core.css" />
     <Content Include="Content\assets\css\core.min.css" />
     <Content Include="Content\assets\css\extras\animate.min.css" />
+    <Content Include="Content\assets\css\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\assets\css\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\assets\css\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\assets\css\icons\fontawesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\assets\css\icons\fontawesome\styles.min.css" />
     <Content Include="Content\assets\css\icons\glyphicons\glyphicons-halflings-regular.svg" />
@@ -2596,6 +2600,39 @@
     <Content Include="Content\fonts\BEBAS___.TTF" />
     <Content Include="Content\fonts\Montserrat-Bold.ttf" />
     <Content Include="Content\fonts\Montserrat-Regular.ttf" />
+    <Content Include="Content\assets\css\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\assets\css\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\assets\css\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\assets\css\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\assets\css\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\assets\css\font-awesome\less\animated.less" />
+    <Content Include="Content\assets\css\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\assets\css\font-awesome\less\core.less" />
+    <Content Include="Content\assets\css\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\assets\css\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\assets\css\font-awesome\less\icons.less" />
+    <Content Include="Content\assets\css\font-awesome\less\larger.less" />
+    <Content Include="Content\assets\css\font-awesome\less\list.less" />
+    <Content Include="Content\assets\css\font-awesome\less\mixins.less" />
+    <Content Include="Content\assets\css\font-awesome\less\path.less" />
+    <Content Include="Content\assets\css\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\assets\css\font-awesome\less\screen-reader.less" />
+    <Content Include="Content\assets\css\font-awesome\less\stacked.less" />
+    <Content Include="Content\assets\css\font-awesome\less\variables.less" />
+    <Content Include="Content\assets\css\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_animated.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_core.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_list.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_path.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\assets\css\font-awesome\scss\_variables.scss" />
     <None Include="Properties\PublishProfiles\yugen.gg - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -2649,13 +2686,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\knockout.validation.min.js.map" />
     <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\Register\IPN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\assets\css\font-awesome\css\" />
-    <Folder Include="Content\assets\css\font-awesome\fonts\" />
-    <Folder Include="Content\assets\css\font-awesome\less\" />
-    <Folder Include="Content\assets\css\font-awesome\scss\" />
+    <Folder Include="Views\Payment\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -2667,6 +2702,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\Pages\About.ts" />
+    <TypeScriptCompile Include="Scripts\Pages\Events.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Index.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Register.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Site.ts" />

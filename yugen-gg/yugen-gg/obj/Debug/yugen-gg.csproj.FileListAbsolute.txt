@@ -138,7 +138,6 @@ F:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Routing.dll
 F:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.csprojResolveAssemblyReference.cache
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Abstractions.dll
 C:\git\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Routing.dll
-D:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.csprojResolveAssemblyReference.cache
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.dll
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.pdb
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\ApplicationInsights.config
@@ -208,3 +207,4 @@ D:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Google.xml
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Debug\yugen-gg.csprojResolveAssemblyReference.cache

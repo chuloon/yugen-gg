@@ -9,4 +9,4 @@
     return vars;
 }
 
-let isBusy = ko.observable<boolean>();
+let isBusy = ko.observable<boolean>(false);
