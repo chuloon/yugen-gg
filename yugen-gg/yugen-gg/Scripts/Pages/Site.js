@@ -9,4 +9,3 @@ function getUrlParams() {
     return vars;
 }
 var isBusy = ko.observable(false);
-//# sourceMappingURL=Site.js.map

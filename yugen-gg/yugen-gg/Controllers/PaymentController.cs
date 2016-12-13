@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
@@ -45,7 +47,19 @@ namespace yugen_gg.Controllers
                 if (amountPaid == 9)  // you might want to have a bigger than or equal to sign here!
                 {
                     //If the correct amount was paid, make a call to the Javascript method to write to firebase
-                    JavaScript("registerSuccess()");
+                    var url = "yugen-a088d.firebaseapp.com";
+
+                    HttpClient client = new HttpClient();
+                    client.BaseAddress = new Uri(url);
+
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    HttpResponseMessage responseMessage = client.GetAsync("").Result;
+
+                    if(responseMessage.IsSuccessStatusCode)
+                    {
+
+                    }
                 }
                 else
                 {
