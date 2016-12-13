@@ -18,6 +18,7 @@ var hearthstoneObject = {
     game: 'Hearthstone'
 };
 ko.validation.rules.pattern.message = 'Invalid.';
+$('#hearthstone-phone').mask('999-999-9999');
 ko.validation.init({
     registerExtenders: true,
     messagesOnModified: true,
@@ -26,7 +27,6 @@ ko.validation.init({
     messageTemplate: null
 }, true);
 var errors = ko.validation.group(hearthstoneObject);
-debugger;
 function registerViewModel() {
     var self = this;
     this.showForm = function (params) {
@@ -40,7 +40,6 @@ function registerViewModel() {
     };
     this.registerClick = function () {
         var returnBool = false;
-        debugger;
         hearthstoneObject.id(hearthstoneObject.basicInfo.firstName() + hearthstoneObject.basicInfo.lastName() + Math.floor(Math.random() * 1000) + 1);
         self.hsObjectUnwrapped = ko.toJS(hearthstoneObject);
         try {

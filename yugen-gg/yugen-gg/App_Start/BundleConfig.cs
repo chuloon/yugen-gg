@@ -20,7 +20,7 @@ namespace yugen_gg
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
-        
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
@@ -42,6 +42,15 @@ namespace yugen_gg
                 "~/content/assets/js/plugins/forms/inputs/typeahead/handlebars.min.js",
                 "~/content/assets/js/plugins/forms/inputs/alpaca/alpaca.min.js",
                 "~/content/assets/js/plugsins/ui/ripple.min.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/inputmask").Include(
+                "~/Scripts/jquery.inputmask/inputmask.js",
+                "~/Scripts/jquery.inputmask/jquery.inputmask.js",
+                "~/Scripts/jquery.inputmask/inputmask.extensions.js",
+                "~/Scripts/jquery.inputmask/inputmask.date.extensions.js",
+                //and other extensions you want to include
+                "~/Scripts/jquery.inputmask/inputmask.numeric.extensions.js"
                 ));
         }
     }

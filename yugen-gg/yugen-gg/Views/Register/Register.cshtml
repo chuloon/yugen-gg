@@ -6,6 +6,7 @@
 @section AddToHead {
     <link type="text/css" rel="stylesheet" href="~/Content/stylesheets/register.css" />
     <script type="text/javascript" src="~/Scripts/knockout.validation.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.3/jquery.mask.js"></script>
 }
 
 <script>
@@ -105,7 +106,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <input type="text" class="alpaca-control form-control" placeholder="phone" data-bind="value: hearthstoneObject.basicInfo.phone, disable: confirmCheckout" />
+                            <input id="hearthstone-phone" type="text" class="alpaca-control form-control" placeholder="phone" data-bind="value: hearthstoneObject.basicInfo.phone, disable: confirmCheckout" />
                         </div>
                     </div>
                     <div class="row">
