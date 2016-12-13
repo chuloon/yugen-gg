@@ -10,7 +10,7 @@ let formVisible = ko.observable<boolean>(false);
 
 let hearthstoneObject = {
     basicInfo: {
-        firstName: ko.observable<string>(),
+        firstName: ko.observable<string>().extend({ maxLength: 2 }),
         lastName: ko.observable<string>(),
         battleId: ko.observable<string>(),
         email: ko.observable<string>(),
@@ -20,6 +20,19 @@ let hearthstoneObject = {
     paid: ko.observable<boolean>(false),
     game: 'Hearthstone'
 }
+
+ko.validation.rules.pattern.message = 'Invalid.';
+
+ko.validation.init({
+    registerExtenders: true,
+    messagesOnModified: true,
+    insertMessages: true,
+    parseInputAttributes: true,
+    messageTemplate: null
+}, true);
+
+let errors = ko.validation.group(hearthstoneObject);
+debugger;
 
 function registerViewModel() {
     let self = this;
@@ -36,7 +49,7 @@ function registerViewModel() {
 
     this.registerClick = () => {
         let returnBool = false;
-
+        debugger;
         hearthstoneObject.id(hearthstoneObject.basicInfo.firstName() + hearthstoneObject.basicInfo.lastName() + Math.floor(Math.random() * 1000) + 1);
         self.hsObjectUnwrapped = ko.toJS(hearthstoneObject);
         try {

@@ -7,7 +7,7 @@ var registrationId = ko.observable();
 var formVisible = ko.observable(false);
 var hearthstoneObject = {
     basicInfo: {
-        firstName: ko.observable(),
+        firstName: ko.observable().extend({ maxLength: 2 }),
         lastName: ko.observable(),
         battleId: ko.observable(),
         email: ko.observable(),
@@ -17,6 +17,16 @@ var hearthstoneObject = {
     paid: ko.observable(false),
     game: 'Hearthstone'
 };
+ko.validation.rules.pattern.message = 'Invalid.';
+ko.validation.init({
+    registerExtenders: true,
+    messagesOnModified: true,
+    insertMessages: true,
+    parseInputAttributes: true,
+    messageTemplate: null
+}, true);
+var errors = ko.validation.group(hearthstoneObject);
+debugger;
 function registerViewModel() {
     var self = this;
     this.showForm = function (params) {
@@ -30,6 +40,7 @@ function registerViewModel() {
     };
     this.registerClick = function () {
         var returnBool = false;
+        debugger;
         hearthstoneObject.id(hearthstoneObject.basicInfo.firstName() + hearthstoneObject.basicInfo.lastName() + Math.floor(Math.random() * 1000) + 1);
         self.hsObjectUnwrapped = ko.toJS(hearthstoneObject);
         try {
