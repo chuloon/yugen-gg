@@ -7,11 +7,11 @@ var registrationId = ko.observable();
 var formVisible = ko.observable(false);
 var hearthstoneObject = {
     basicInfo: {
-        firstName: ko.observable().extend({ maxLength: 2 }),
-        lastName: ko.observable(),
-        battleId: ko.observable(),
-        email: ko.observable(),
-        phone: ko.observable("")
+        firstName: ko.observable().extend({ required: true }),
+        lastName: ko.observable().extend({ required: true }),
+        battleId: ko.observable().extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        email: ko.observable().extend({ required: true, email: true }),
+        phone: ko.observable("").extend({ phoneUS: true })
     },
     id: ko.observable(),
     paid: ko.observable(false),

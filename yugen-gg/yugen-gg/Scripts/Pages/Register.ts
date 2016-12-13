@@ -10,11 +10,11 @@ let formVisible = ko.observable<boolean>(false);
 
 let hearthstoneObject = {
     basicInfo: {
-        firstName: ko.observable<string>().extend({ maxLength: 2 }),
-        lastName: ko.observable<string>(),
-        battleId: ko.observable<string>(),
-        email: ko.observable<string>(),
-        phone: ko.observable<string>("")
+        firstName: ko.observable<string>().extend({ required: true }),
+        lastName: ko.observable<string>().extend({ required: true }),
+        battleId: ko.observable<string>().extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        email: ko.observable<string>().extend({ required: true, email: true }),
+        phone: ko.observable<string>("").extend({ phoneUS: true })
     },
     id: ko.observable<string>(),
     paid: ko.observable<boolean>(false),
