@@ -71,7 +71,7 @@
                         <input type="hidden" name="amount" data-bind="attr: { value: eventData().entryPrice }" />
                         <input type="hidden" name="no_shipping" value="1" />
                         <input type="hidden" name="notify_url" value="http://yugen.gg/Payment/IPN" />
-                        <input type="hidden" name="custom" data-bind="attr: { value: registrationId }" />
+                        <input type="hidden" name="custom" data-bind="attr: { value: 'registration/' + eventId() + '/' + registrationId() }" />
 
                         <button class="btn btn-primary highlights-button register-button pull-right" type="submit">Checkout</button>
                         <button class="btn btn-link pull-right cancel-btn" data-bind="click: $data.cancelClick">Cancel</button>

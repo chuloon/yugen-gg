@@ -5,6 +5,8 @@
 
 @section AddToHead {
     <link type="text/css" rel="stylesheet" href="~/Content/stylesheets/register.css" />
+    <script type="text/javascript" src="~/Scripts/knockout.validation.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.3/jquery.mask.js"></script>
 }
 
 <script>
@@ -12,6 +14,7 @@
     firebase.database().ref('/events/@ViewBag.id').once('value').then((result) => {
         eventData(result.val());
         gameList(eventData().games.split(','));
+        eventId("@ViewBag.id");
         loadComplete(true);
         isBusy(false);
     })
@@ -48,6 +51,37 @@
     </div>
 </div>
 
+<div class="row section-separator"></div>
+
+<div id="confirm-section" class="row" data-bind="css: confirmCheckout() ? 'form-shown' : 'form-hidden'">
+    <div class="col-xs-12">
+        <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+            <div class="col-xs-8">
+                <h1 style="color: white; margin-top: 5px;">Double check the information above</h1>
+            </div>
+
+            <div class="col-xs-4">
+                @* Example link: https://blog.artemlos.net/posts/a-simple-way-to-integrate-paypal-into-asp-net-mvc-4/ *@
+                @* Production action="https://www.paypal.com/cgi-bin/webscr" *@
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                    <fieldset>
+                        <input class="full-width" type="hidden" name="business" value="support@yugen.gg" />
+                        <input type="hidden" name="cmd" value="_xclick" />
+                        <input type="hidden" name="item_name" value="Hearthstone Registration" />
+                        <input type="hidden" name="amount" data-bind="attr: { value: eventData().entryPrice }" />
+                        <input type="hidden" name="no_shipping" value="1" />
+                        <input type="hidden" name="notify_url" value="http://yugen.gg/Payment/IPN" />
+                        <input type="hidden" name="custom" data-bind="attr: { value: 'registration/' + eventId() + '/' + registrationId() }" />
+
+                        <button class="btn btn-primary highlights-button register-button pull-right" type="submit">Checkout</button>
+                        <button class="btn btn-link pull-right cancel-btn" data-bind="click: $data.cancelClick">Cancel</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- /ko -->
 
 <script id="hearthstone-form" type="text/html">
@@ -59,25 +93,25 @@
                     <h3>Basic Information</h3>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
-                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: hearthstoneObject.basicInfo.firstName" />
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: hearthstoneObject.basicInfo.firstName, disable: confirmCheckout" />
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: hearthstoneObject.basicInfo.lastName" />
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: hearthstoneObject.basicInfo.lastName, disable: confirmCheckout" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <input type="text" class="alpaca-control form-control" placeholder="email" data-bind="value: hearthstoneObject.basicInfo.email" />
+                            <input type="text" class="alpaca-control form-control" placeholder="email" data-bind="value: hearthstoneObject.basicInfo.email, disable: confirmCheckout" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <input type="text" class="alpaca-control form-control" placeholder="phone" data-bind="value: hearthstoneObject.basicInfo.phone" />
+                            <input id="hearthstone-phone" type="text" class="alpaca-control form-control" placeholder="phone" data-bind="value: hearthstoneObject.basicInfo.phone, disable: confirmCheckout" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-md-8 col-md-offset-2">
-                            <input type="text" class="alpaca-control form-control" placeholder="battleid" data-bind="value: hearthstoneObject.basicInfo.battleId" />
+                            <input type="text" class="alpaca-control form-control" placeholder="battleid" data-bind="value: hearthstoneObject.basicInfo.battleId, disable: confirmCheckout" />
                         </div>
                     </div>
                 </div>
@@ -104,22 +138,8 @@
 
         @* Register *@
         <div class="col-xs-12 col-md-3 register-button-container">
-            @* Example link: https://blog.artemlos.net/posts/a-simple-way-to-integrate-paypal-into-asp-net-mvc-4/ *@
-            @* Production action="https://www.paypal.com/cgi-bin/webscr" *@
-            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
-                <fieldset>
-                    <input class="full-width" type="hidden" name="business" value="support@yugen.gg" />
-                    <input type="hidden" name="cmd" value="_xclick" />
-                    <input type="hidden" name="item_name" value="The unlimited music download subscription" />
-                    <input type="hidden" name="amount" value="9" />
-                    <input type="hidden" name="no_shipping" value="1" />
-                    @*<input type="hidden" name="RETURNURL" value="http://yugen.gg/Payment/returnUrl" />
-                    <input type="hidden" name="return" value="http://yugen.gg/Payment/returnUrl2" />*@
-                    <input type="hidden" name="notify_url" value="http://yugen.gg/Payment/IPN" />
 
-                    <button class="btn btn-primary highlights-button register-button pull-right" type="submit">Checkout</button>
-                </fieldset>
-            </form>
+            <button class="btn btn-primary highlights-button register-button pull-right" data-bind="click: $data.registerClick, visible: confirmCheckout() == false">Next</button>
         </div>
     </div>
 </script>

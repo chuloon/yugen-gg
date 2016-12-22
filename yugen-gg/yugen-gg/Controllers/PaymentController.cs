@@ -9,6 +9,11 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI;
+using FireSharp.Interfaces;
+using FireSharp.Config;
+using FireSharp;
+using FireSharp.Response;
+using System.Net.Mail;
 
 namespace yugen_gg.Controllers
 {
@@ -20,23 +25,22 @@ namespace yugen_gg.Controllers
             return View();
         }
 
-        public ActionResult IPN()
+        public async System.Threading.Tasks.Task<ActionResult> IPN()
         {
             // Receive IPN request from PayPal and parse all the variables returned
             var formVals = new Dictionary<string, string>();
             formVals.Add("cmd", "_notify-synch"); //notify-synch_notify-validate
             formVals.Add("at", "si-ybLuZaapE9ySInDhgmULM2Xoc8IxPot3IKq2LP240wkkRNT9rx_a6kSK"); // this has to be adjusted
             formVals.Add("tx", Request["tx"]);
-            formVals.Add("test", "HELLOWORLD");
 
             string response = GetPayPalResponse(formVals, true);
 
 
-            if(response.Contains("SUCCESS"))
+            if (response.Contains("SUCCESS"))
             {
                 string transactionID = GetPDTValue(response, "txn_id"); // txn_id //d
                 string sAmountPaid = GetPDTValue(response, "mc_gross"); // d
-                string deviceID = GetPDTValue(response, "custom"); // d
+                string buyerID = GetPDTValue(response, "custom"); // d
                 string payerEmail = GetPDTValue(response, "payer_email"); // d
                 string Item = GetPDTValue(response, "item_name");
 
@@ -44,22 +48,38 @@ namespace yugen_gg.Controllers
                 Decimal amountPaid = 0;
                 Decimal.TryParse(sAmountPaid, System.Globalization.NumberStyles.Number, System.Globalization.CultureInfo.InvariantCulture, out amountPaid);
 
-                if (amountPaid == 9)  // you might want to have a bigger than or equal to sign here!
+                if (amountPaid == 5)  // you might want to have a bigger than or equal to sign here!
                 {
-                    //If the correct amount was paid, make a call to the Javascript method to write to firebase
-                    var url = "yugen-a088d.firebaseapp.com";
 
-                    HttpClient client = new HttpClient();
-                    client.BaseAddress = new Uri(url);
-
-                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                    HttpResponseMessage responseMessage = client.GetAsync("").Result;
-
-                    if(responseMessage.IsSuccessStatusCode)
+                    IFirebaseConfig config = new FirebaseConfig
                     {
+                        AuthSecret = "OsprEPZtYgU1bP2xKP3OVujZIPt7tNo0BLrg0gO4",
+                        BasePath = "https://yugen-a088d.firebaseio.com/"
+                    };
 
-                    }
+                    IFirebaseClient client = new FirebaseClient(config);
+
+                    var setFlag = new paidFlag
+                    {
+                        paid = true
+                    };
+                    FirebaseResponse updateResponse = await client.UpdateAsync(buyerID, setFlag);
+
+                    FirebaseResponse getResponse = await client.GetAsync(buyerID);
+                    RegistrationUserHearthstone hsResponse = getResponse.ResultAs<RegistrationUserHearthstone>();
+
+                    MailMessage mail = new MailMessage("support@yugen.gg", hsResponse.basicInfo.email);
+
+                    SmtpClient mailClient = new SmtpClient("smtp.gmail.com", 587);
+                    mailClient.UseDefaultCredentials = false;
+                    mailClient.Credentials = new NetworkCredential("support@yugen.gg", "yugensupport");
+                    mailClient.EnableSsl = true;
+
+                    mail.Subject = "Yugen Registration Confirmation";
+                    mail.IsBodyHtml = true;
+                    mail.Body = "<p>Hello!</p><p>Your registration is complete and your payment has been received! Please check your inbox for the confirmation email. We're looking forward to seeing you there!</p>";
+
+                    mailClient.Send(mail);
                 }
                 else
                 {
@@ -67,7 +87,29 @@ namespace yugen_gg.Controllers
                 }
             }
 
-            return View();
+            return View("PaymentConfirmation");
+        }
+
+        public class RegistrationUserHearthstone
+        {
+            public basicInfoHearthstone basicInfo { get; set; }
+            public string game { get; set; }
+            public string id { get; set; }
+            public bool paid { get; set; }
+        }
+
+        public class basicInfoHearthstone
+        {
+            public string battleId { get; set; }
+            public string email { get; set; }
+            public string firstName { get; set; }
+            public string lastName { get; set; }
+            public string phone { get; set; }
+        }
+
+        public class paidFlag
+        {
+            public bool paid { get; set; }
         }
 
         string GetPayPalResponse(Dictionary<string, string> formVals, bool useSandbox)

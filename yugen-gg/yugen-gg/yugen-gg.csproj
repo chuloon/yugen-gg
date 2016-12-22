@@ -2333,10 +2333,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\index\casters.jpg" />
+    <Content Include="Content\img\index\hearthstone-logo.jpg" />
     <Content Include="Content\img\index\people-at-computers.jpg" />
     <Content Include="Content\img\index\header.jpg" />
     <Content Include="Content\img\index\example-event-body.jpg" />
-    <Content Include="Content\img\index\hearthstone-logo.png" />
     <Content Include="Content\img\index\hearthstone-event.jpg" />
     <Content Include="Content\img\index\logo-large.png" />
     <Content Include="Content\img\index\example-event.jpg" />
@@ -2753,10 +2753,10 @@
     <Content Include="Scripts\knockout.validation.min.js.map" />
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Register\IPN.cshtml" />
+    <Content Include="Views\Payment\PaymentConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Payment\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -2770,6 +2770,7 @@
     <TypeScriptCompile Include="Scripts\Pages\About.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Events.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Index.ts" />
+    <TypeScriptCompile Include="Scripts\Pages\PaymentConfirmation.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Register.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Site.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
