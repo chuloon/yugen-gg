@@ -1,6 +1,4 @@
 ﻿declare var firebase: any;
-let events = ko.observable();
-let eventsArray = ko.observableArray();
 
 let mainEventData = {
     mainEventHeader: ko.observable<string>(),
@@ -18,7 +16,7 @@ $().ready(() => {
         events(result.val());
         $.each(events(), (index, item) => {
             eventsArray.push(item);
-        })
+        });
 
         mainEventData.mainEventHeader((<any>eventsArray()[0]).eventHeader);
         mainEventData.mainEventTitle((<any>eventsArray()[0]).name);
@@ -41,7 +39,7 @@ $("#alpaca1").attr("data-bind", "text: $data.emailText");
 
 function indexViewModel() {
     let self = this;
-
+    
     self.emailText = ko.observable<string>("");
 
     this.mailingClick = () => {

@@ -25,7 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -2334,6 +2334,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\index\casters.jpg" />
     <Content Include="Content\img\index\hearthstone-logo.jpg" />
+    <Content Include="Content\img\index\kof-header.jpg" />
     <Content Include="Content\img\index\people-at-computers.jpg" />
     <Content Include="Content\img\index\header.jpg" />
     <Content Include="Content\img\index\example-event-body.jpg" />
