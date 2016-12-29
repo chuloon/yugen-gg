@@ -11,6 +11,9 @@ $().ready(function () {
     });
 });
 function eventsViewModel() {
+    this.registerClick = function (params) {
+        window.location.href = "/Register/" + params;
+    };
 }
 isBusy(false);
 ko.applyBindings(new eventsViewModel());
