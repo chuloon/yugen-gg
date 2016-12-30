@@ -1,5 +1,3 @@
-var events = ko.observable();
-var eventsArray = ko.observableArray();
 var mainEventData = {
     mainEventHeader: ko.observable(),
     mainEventTitle: ko.observable(),
