@@ -12,7 +12,9 @@
 });
 
 function eventsViewModel() {
-
+    this.registerClick = (params: any) => {
+        window.location.href = "/Register/" + params;
+    }
 }
 
 isBusy(false);
