@@ -3,7 +3,8 @@ ko.validation.init({
     messagesOnModified: true,
     insertMessages: true,
     parseInputAttributes: true,
-    messageTemplate: null
+    messageTemplate: null,
+    decorateInputElement: true
 }, true);
 var eventData = ko.observable();
 var loadComplete = ko.observable(false);
@@ -12,20 +13,38 @@ var confirmCheckout = ko.observable(false);
 var eventId = ko.observable();
 var registrationId = ko.observable();
 var formVisible = ko.observable(false);
+var deckClasses = ko.observableArray([
+    "Druid",
+    "Hunter",
+    "Mage",
+    "Paladin",
+    "Priest",
+    "Rogue",
+    "Shaman",
+    "Warlock",
+    "Warrior"
+]);
 var hearthstoneObject = {
     basicInfo: {
         firstName: ko.observable("test").extend({ required: true }),
         lastName: ko.observable("test").extend({ required: true }),
         battleId: ko.observable("test#1234").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
         email: ko.observable("test@test.com").extend({ required: true, email: true }),
-        phone: ko.observable("5133848411").extend({ phoneUS: true })
+        phone: ko.observable("5133848411").extend({ phoneUS: true }),
+        deckClass1: ko.observable().extend({ required: true }),
+        deckClass2: ko.observable().extend({ required: true }),
+        deckClass3: ko.observable().extend({ required: true }),
+        deckClass4: ko.observable().extend({ required: true })
     },
     id: ko.observable(),
     game: 'Hearthstone'
 };
-var errors = ko.validation.group(hearthstoneObject);
+var errors = ko.validation.group(hearthstoneObject, { deep: true });
 ko.validation.rules.pattern.message = 'Invalid.';
 $('#hearthstone-phone').mask('999-999-9999');
+hearthstoneObject.basicInfo.deckClass1.subscribe(function () {
+    console.log(hearthstoneObject.basicInfo.deckClass1());
+});
 function registerViewModel() {
     var self = this;
     this.showForm = function (params) {
@@ -45,7 +64,6 @@ function registerViewModel() {
             self.hsObjectUnwrapped = ko.toJS(hearthstoneObject);
             try {
                 return firebase.database().ref('/registration/' + eventId()).once('value').then(function (result) {
-                    debugger;
                     if (result.val() != null) {
                         $.each(result.val(), function (index, item) {
                             if (index == registrationId()) {
@@ -68,7 +86,7 @@ function registerViewModel() {
             }
         }
         else {
-            alert("Errors!");
+            errors.showAllMessages();
         }
     };
     this.cancelClick = function () {
@@ -76,4 +94,3 @@ function registerViewModel() {
     };
 }
 ko.applyBindings(new registerViewModel());
-//# sourceMappingURL=Register.js.map

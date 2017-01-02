@@ -3,7 +3,8 @@
     messagesOnModified: true,
     insertMessages: true,
     parseInputAttributes: true,
-    messageTemplate: null
+    messageTemplate: null,
+    decorateInputElement: true
 }, true);
 
 let eventData = ko.observable<any>();
@@ -16,25 +17,44 @@ let registrationId = ko.observable<string>();
 
 let formVisible = ko.observable<boolean>(false);
 
+let deckClasses = ko.observableArray([
+    "Druid",
+    "Hunter",
+    "Mage",
+    "Paladin",
+    "Priest",
+    "Rogue",
+    "Shaman",
+    "Warlock",
+    "Warrior"
+]);
+
 let hearthstoneObject = {
     basicInfo: {
         firstName: ko.observable<string>("test").extend({ required: true }),
         lastName: ko.observable<string>("test").extend({ required: true }),
         battleId: ko.observable<string>("test#1234").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
         email: ko.observable<string>("test@test.com").extend({ required: true, email: true }),
-        phone: ko.observable<string>("5133848411").extend({ phoneUS: true })
+        phone: ko.observable<string>("5133848411").extend({ phoneUS: true }),
+
+        deckClass1: ko.observable<string>().extend({ required: true }),
+        deckClass2: ko.observable<string>().extend({ required: true }),
+        deckClass3: ko.observable<string>().extend({ required: true }),
+        deckClass4: ko.observable<string>().extend({ required: true })
     },
     id: ko.observable<string>(),
     game: 'Hearthstone'
 }
 
-let errors = ko.validation.group(hearthstoneObject);
+let errors = ko.validation.group(hearthstoneObject, { deep: true });
 
 ko.validation.rules.pattern.message = 'Invalid.';
 
 (<any>$('#hearthstone-phone')).mask('999-999-9999');
 
-
+hearthstoneObject.basicInfo.deckClass1.subscribe(() => {
+    console.log(hearthstoneObject.basicInfo.deckClass1());
+})
 
 function registerViewModel() {
     let self = this;
@@ -57,7 +77,6 @@ function registerViewModel() {
             self.hsObjectUnwrapped = ko.toJS(hearthstoneObject);
             try {
                 return firebase.database().ref('/registration/' + eventId()).once('value').then((result) => {
-                    debugger;
                     if (result.val() != null) {
                         $.each(result.val(), (index, item) => {
                             if (index == registrationId()) {
@@ -82,7 +101,7 @@ function registerViewModel() {
             }
         }
         else {
-            alert("Errors!")
+            errors.showAllMessages();
         }
         
     }
