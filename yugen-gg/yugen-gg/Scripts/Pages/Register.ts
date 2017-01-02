@@ -48,6 +48,22 @@ let hearthstoneObject = {
 
 let errors = ko.validation.group(hearthstoneObject, { deep: true });
 
+hearthstoneObject.basicInfo.deckClass1.extend({
+    validation: {
+        validator: function() {
+            let decks = hearthstoneObject.basicInfo;
+
+            if (decks.deckClass1() == decks.deckClass2() || decks.deckClass1() == decks.deckClass3() || decks.deckClass1() == decks.deckClass4()) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        },
+        messsage: "No duplicate classes."
+    }
+});
+
 ko.validation.rules.pattern.message = 'Invalid.';
 
 (<any>$('#hearthstone-phone')).mask('999-999-9999');
