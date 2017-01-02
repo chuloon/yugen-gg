@@ -33,7 +33,7 @@ namespace yugen_gg.Controllers
             formVals.Add("at", "si-ybLuZaapE9ySInDhgmULM2Xoc8IxPot3IKq2LP240wkkRNT9rx_a6kSK"); // this has to be adjusted
             formVals.Add("tx", Request["tx"]);
 
-            string response = GetPayPalResponse(formVals, true);
+            string response = GetPayPalResponse(formVals, false);
 
 
             if (response.Contains("SUCCESS"))

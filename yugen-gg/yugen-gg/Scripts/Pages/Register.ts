@@ -31,11 +31,11 @@ let deckClasses = ko.observableArray([
 
 let hearthstoneObject = {
     basicInfo: {
-        firstName: ko.observable<string>("test").extend({ required: true }),
-        lastName: ko.observable<string>("test").extend({ required: true }),
-        battleId: ko.observable<string>("test#1234").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
-        email: ko.observable<string>("test@test.com").extend({ required: true, email: true }),
-        phone: ko.observable<string>("5133848411").extend({ phoneUS: true }),
+        firstName: ko.observable<string>().extend({ required: true }),
+        lastName: ko.observable<string>().extend({ required: true }),
+        battleId: ko.observable<string>().extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        email: ko.observable<string>().extend({ required: true, email: true }),
+        phone: ko.observable<string>().extend({ phoneUS: true }),
 
         deckClass1: ko.observable<string>().extend({ required: true }),
         deckClass2: ko.observable<string>().extend({ required: true }),
