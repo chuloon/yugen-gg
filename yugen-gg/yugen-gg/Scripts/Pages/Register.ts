@@ -60,7 +60,52 @@ hearthstoneObject.basicInfo.deckClass1.extend({
                 return true;
             }
         },
-        messsage: "No duplicate classes."
+        message: 'No duplicate classes.'
+    }
+});
+hearthstoneObject.basicInfo.deckClass2.extend({
+    validation: {
+        validator: function () {
+            let decks = hearthstoneObject.basicInfo;
+
+            if (decks.deckClass2() == decks.deckClass1() || decks.deckClass2() == decks.deckClass3() || decks.deckClass2() == decks.deckClass4()) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        },
+        message: 'No duplicate classes.'
+    }
+});
+hearthstoneObject.basicInfo.deckClass3.extend({
+    validation: {
+        validator: function () {
+            let decks = hearthstoneObject.basicInfo;
+
+            if (decks.deckClass3() == decks.deckClass2() || decks.deckClass3() == decks.deckClass1() || decks.deckClass3() == decks.deckClass4()) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        },
+        message: 'No duplicate classes.'
+    }
+});
+hearthstoneObject.basicInfo.deckClass4.extend({
+    validation: {
+        validator: function () {
+            let decks = hearthstoneObject.basicInfo;
+
+            if (decks.deckClass4() == decks.deckClass2() || decks.deckClass4() == decks.deckClass3() || decks.deckClass4() == decks.deckClass1()) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        },
+        message: 'No duplicate classes.'
     }
 });
 

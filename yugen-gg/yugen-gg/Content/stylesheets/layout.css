@@ -107,4 +107,5 @@ input.alpaca-control {
 
 .validationMessage {
     color: red;
+    letter-spacing: 1px;
 }
