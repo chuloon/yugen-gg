@@ -260,3 +260,15 @@ C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\R
 C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Register.js.map
 C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Site.js
 C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Site.js.map
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\About.js
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\About.js.map
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Events.js
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Events.js.map
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Index.js
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Index.js.map
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\PaymentConfirmation.js
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\PaymentConfirmation.js.map
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Register.js
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Register.js.map
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Site.js
+C:\Github\yugen-gg\yugen-gg\yugen-gg\Scripts\Pages\Site.js.map

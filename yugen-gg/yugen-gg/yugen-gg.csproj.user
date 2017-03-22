@@ -4,7 +4,7 @@
     <UseIISExpress>true</UseIISExpress>
     <ProjectView>ProjectFiles</ProjectView>
     <NameOfLastUsedPublishProfile>yugen.gg - Web Deploy</NameOfLastUsedPublishProfile>
-    <ToolsVersionPromptShown>2.1</ToolsVersionPromptShown>
+    <ToolsVersionPromptShown>2.2</ToolsVersionPromptShown>
     <WebStackScaffolding_ControllerDialogWidth>600</WebStackScaffolding_ControllerDialogWidth>
     <WebStackScaffolding_IsLayoutPageSelected>True</WebStackScaffolding_IsLayoutPageSelected>
     <WebStackScaffolding_IsPartialViewSelected>False</WebStackScaffolding_IsPartialViewSelected>
