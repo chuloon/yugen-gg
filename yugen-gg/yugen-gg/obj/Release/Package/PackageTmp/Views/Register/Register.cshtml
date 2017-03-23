@@ -63,7 +63,8 @@
             <div class="col-xs-4">
                 @* Example link: https://blog.artemlos.net/posts/a-simple-way-to-integrate-paypal-into-asp-net-mvc-4/ *@
                 @* Production action="https://www.paypal.com/cgi-bin/webscr" *@
-                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                @* Sandbox action="https://www.sandbox.paypal.com/cgi-bin/webscr" *@
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
                     <fieldset>
                         <input class="full-width" type="hidden" name="business" value="support@yugen.gg" />
                         <input type="hidden" name="cmd" value="_xclick" />
@@ -123,6 +124,11 @@
             <div class="panel">
                 <div class="panel-body">
                     <h3>Deck Class Selection</h3>
+
+                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass1, optionsCaption: 'Select'" style="margin-top: 25px;"></select>
+                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass2, optionsCaption: 'Select'"></select>
+                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass3, optionsCaption: 'Select'"></select>
+                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass4, optionsCaption: 'Select'"></select>
                 </div>
             </div>
         </div>

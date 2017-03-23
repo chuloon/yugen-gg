@@ -231,3 +231,189 @@ D:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Linq.xml
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.PlatformServices.xml
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Windows.Threading.xml
 D:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Release\yugen-gg.csproj.App.config
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\ApplicationInsights.config
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll.config
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.pdb
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Antlr3.Runtime.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\BouncyCastle.CryptoExt.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\EntityFramework.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\EntityFramework.SqlServer.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\FireSharp.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.Web.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Newtonsoft.Json.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Owin.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Net.Http.Extensions.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Net.Http.Primitives.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Core.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Interfaces.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Linq.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.PlatformServices.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Windows.Threading.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Abstractions.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Helpers.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Mvc.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Optimization.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Razor.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Routing.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.Razor.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\WebGrease.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.Web.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Newtonsoft.Json.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Net.Http.Extensions.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Net.Http.Primitives.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Core.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Interfaces.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Linq.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.PlatformServices.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Windows.Threading.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Helpers.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Mvc.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Optimization.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Razor.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.Razor.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Antlr3.Runtime.pdb
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\EntityFramework.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\EntityFramework.SqlServer.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\obj\Release\yugen-gg.csproj.App.config
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\obj\Release\yugen-gg.csprojResolveAssemblyReference.cache
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\obj\Release\yugen-gg.dll
+C:\Users\Benjamin Ng\Documents\GitHub\yugen-gg\yugen-gg\yugen-gg\obj\Release\yugen-gg.pdb
+C:\Github\yugen-gg\yugen-gg\yugen-gg\obj\Release\yugen-gg.csproj.App.config
+C:\Github\yugen-gg\yugen-gg\yugen-gg\obj\Release\yugen-gg.csprojResolveAssemblyReference.cache
+C:\Github\yugen-gg\yugen-gg\yugen-gg\obj\Release\yugen-gg.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\obj\Release\yugen-gg.pdb
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\ApplicationInsights.config
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll.config
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\yugen-gg.pdb
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Antlr3.Runtime.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\BouncyCastle.CryptoExt.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\EntityFramework.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\EntityFramework.SqlServer.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\FireSharp.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.DependencyCollector.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.Web.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.WindowsServer.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.ApplicationInsights.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Google.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Web.Infrastructure.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Newtonsoft.Json.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Owin.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Net.Http.Extensions.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Net.Http.Primitives.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Core.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Interfaces.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Linq.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.PlatformServices.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Windows.Threading.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Abstractions.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Helpers.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Mvc.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Optimization.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Razor.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Routing.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.Deployment.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.Razor.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\WebGrease.dll
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.DependencyCollector.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.Web.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AI.WindowsServer.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.ApplicationInsights.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Newtonsoft.Json.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Net.Http.Extensions.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Net.Http.Primitives.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Core.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Interfaces.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Linq.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.PlatformServices.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Reactive.Windows.Threading.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Helpers.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Mvc.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Optimization.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.Razor.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.Deployment.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\System.Web.WebPages.Razor.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Antlr3.Runtime.pdb
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\EntityFramework.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\EntityFramework.SqlServer.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Google.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Github\yugen-gg\yugen-gg\yugen-gg\bin\Microsoft.Owin.Security.MicrosoftAccount.xml

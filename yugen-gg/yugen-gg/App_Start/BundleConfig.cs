@@ -10,33 +10,33 @@ namespace yugen_gg
         {
             BundleTable.EnableOptimizations = false;
 
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+            bundles.Add(new ScriptBundle("~/bundles/jquery-bundle").Include(
                         "~/Scripts/jquery-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval-bundle").Include(
                         "~/Scripts/jquery.validate*"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+            bundles.Add(new ScriptBundle("~/bundles/modernizr-bundle").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap-bundle").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/stylesheets").Include(
+            bundles.Add(new StyleBundle("~/Content/stylesheets-bundle").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/stylesheets/layout.css",
                       "~/Content/assets/css/font-awesome/css/font-awesome.min.css"));
 
-            bundles.Add(new StyleBundle("~/Content/assets/styles").Include(
+            bundles.Add(new StyleBundle("~/Content/assets/styles-bundle").Include(
                       "~/content/assets/css/core.css",
                       "~/content/assets/css/components.css",
                       "~/content/assets/css/colors.css"));
 
-            bundles.Add(new ScriptBundle("~/Content/assets/scripts").Include(
+            bundles.Add(new ScriptBundle("~/Content/assets/scripts-bundle").Include(
                 "~/content/assets/js/plugins/loaders/pace.min.js",
                 "~/content/assets/js/plugins/loaders/blockui.min.js",
                 "~/content/assets/js/plugins/forms/inputs/typeahead/handlebars.min.js",
@@ -44,7 +44,7 @@ namespace yugen_gg
                 "~/content/assets/js/plugsins/ui/ripple.min.js"
                 ));
 
-            bundles.Add(new ScriptBundle("~/bundles/inputmask").Include(
+            bundles.Add(new ScriptBundle("~/bundles/inputmask-bundle").Include(
                 "~/Scripts/jquery.inputmask/inputmask.js",
                 "~/Scripts/jquery.inputmask/jquery.inputmask.js",
                 "~/Scripts/jquery.inputmask/inputmask.extensions.js",
