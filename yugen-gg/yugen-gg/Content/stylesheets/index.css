@@ -1,6 +1,5 @@
 ﻿#title-section {
-    /*background-image: linear-gradient(to bottom, rgba(65, 91, 166, 0.8) 0%, rgba(65, 91, 166, 0.8) 100%), url(/Content/img/index/kof-header.jpg);*/
-    background-image: url(/Content/img/index/kof-header.jpg);
+    background-image: linear-gradient(to bottom, rgba(65, 91, 166, 0.8) 0%, rgba(65, 91, 166, 0.8) 100%), url(/Content/img/index/header.jpg);
     background-size: 100% auto;
     background-position-y: 50%;
     padding: 30px;

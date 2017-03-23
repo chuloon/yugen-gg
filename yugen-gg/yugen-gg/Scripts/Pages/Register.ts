@@ -3,7 +3,12 @@
     messagesOnModified: true,
     insertMessages: true,
     parseInputAttributes: true,
-    messageTemplate: null
+    messageTemplate: null,
+    grouping: {
+        deep: true,
+        live: true,
+        observable: true
+    }
 }, true);
 
 let eventData = ko.observable<any>();

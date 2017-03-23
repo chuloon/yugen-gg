@@ -6,8 +6,6 @@
     <link type="text/css" rel="stylesheet" href="~/Content/stylesheets/events.css" />
 }
 
-<script type="text/javascript" src="~/Scripts/Pages/Events.js"></script>
-
 <div id="page-header" class="row">
     <div class="col-xs-12">
         <h1 class="pull-right page-header-text"><span class="page-header-decoration">//</span>Yugen Events</h1>
@@ -24,78 +22,39 @@
 
 <div id="event-list" class="row">
     <div class="col-xs-12">
-
+        
+        <!-- ko foreach: eventsArray -->
         <div class="panel">
             <div class="panel-body event-panel">
                 <div class="row">
-                    <div class="col-xs-12 event-header" style="background-image: url('/Content/img/index/example-event-body.jpg')" data-toggle="collapse" data-target="#expand-event">
-                        <div class="event-header-text">
-                            <h1 class="primary-yellow-text">Kings of Fireside</h1>
-                            <h3 class="primary-yellow-text">02/13/2017</h3>
+                    <div class="col-xs-12 event-header">
+                        <div data-bind="style: { backgroundImage: 'url(' + $data.eventHorizontalHeader + ')', height: '451px' }, attr: { 'data-target': '#' + $data.id + '-expand' }" data-toggle="collapse">
+                            <div class="event-header-text">
+                                <h1 class="primary-yellow-text" data-bind="text: $data.name"></h1>
+                                <h3 class="primary-yellow-text" data-bind="text: $data.date"></h3>
+                            </div>
                         </div>
                     </div>
-                    <div id="expand-event" class="panel-collapse collapse">
+                    <div data-bind="attr: { id: $data.id + '-expand' }" class="panel-collapse collapse">
                         <div class="panel-body event-information">
-                            <p class="secondary-font">Here is event information</p>
+                            <h4 data-bind="text: $data.locationShort"></h4>
+                            <h5 class="secondary-font" data-bind="text: $data.time"></h5>
+                            <br />
+                            <div class="secondary-font" data-bind="html: $data.longDescription"></div>
+                            
                             <div class="row">
                                 <div class="col-xs-12 panel-body register-line">
-                                    <h3 class="register-button pull-right">REGISTER</h3>
+                                    <h3 class="register-button pull-right" data-bind="click: function(){ $parent.registerClick($data.id) }">REGISTER</h3>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="panel">
-            <div class="panel-body event-panel">
-                <div class="row">
-                    <div class="col-xs-12 event-header" style="background-image: url('/Content/img/index/example-event-body.jpg')" data-toggle="collapse" data-target="#expand-event2">
-                        <div class="event-header-text">
-                            <h1 class="primary-yellow-text">Kings of Fireside</h1>
-                            <h3 class="primary-yellow-text">02/13/2017</h3>
-                        </div>
-                    </div>
-                    <div id="expand-event2" class="panel-collapse collapse">
-                        <div class="panel-body event-information">
-                            <p class="secondary-font">Here is event information</p>
-                            <div class="row">
-                                <div class="col-xs-12 panel-body register-line">
-                                    <h3 class="register-button pull-right">REGISTER</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="panel">
-            <div class="panel-body event-panel">
-                <div class="row">
-                    <div class="col-xs-12 event-header" style="background-image: url('/Content/img/index/example-event-body.jpg')" data-toggle="collapse" data-target="#expand-event3">
-                        <div class="event-header-text">
-                            <h1 class="primary-yellow-text">Kings of Fireside</h1>
-                            <h3 class="primary-yellow-text">02/13/2017</h3>
-                        </div>
-                    </div>
-                    <div id="expand-event3" class="panel-collapse collapse">
-                        <div class="panel-body event-information">
-                            <p class="secondary-font">Here is event information</p>
-                            <div class="row">
-                                <div class="col-xs-12 panel-body register-line">
-                                    <h3 class="register-button pull-right">REGISTER</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- /ko -->
 
     </div>
 </div>
+
+<script type="text/javascript" src="~/Scripts/Pages/Events.js"></script>

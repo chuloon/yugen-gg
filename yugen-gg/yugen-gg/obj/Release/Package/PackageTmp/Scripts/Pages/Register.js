@@ -3,7 +3,12 @@ ko.validation.init({
     messagesOnModified: true,
     insertMessages: true,
     parseInputAttributes: true,
-    messageTemplate: null
+    messageTemplate: null,
+    grouping: {
+        deep: true,
+        live: true,
+        observable: true
+    }
 }, true);
 var eventData = ko.observable();
 var loadComplete = ko.observable(false);
