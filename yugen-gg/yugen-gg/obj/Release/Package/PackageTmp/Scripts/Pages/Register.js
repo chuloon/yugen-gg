@@ -4,7 +4,11 @@ ko.validation.init({
     insertMessages: true,
     parseInputAttributes: true,
     messageTemplate: null,
-    decorateInputElement: true
+    grouping: {
+        deep: true,
+        live: true,
+        observable: true
+    }
 }, true);
 var eventData = ko.observable();
 var loadComplete = ko.observable(false);

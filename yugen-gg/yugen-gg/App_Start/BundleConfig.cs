@@ -22,8 +22,7 @@ namespace yugen_gg
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap-bundle").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/stylesheets-bundle").Include(
                       "~/Content/bootstrap.css",
@@ -33,15 +32,11 @@ namespace yugen_gg
 
             bundles.Add(new StyleBundle("~/Content/assets/styles-bundle").Include(
                       "~/content/assets/css/core.css",
-                      "~/content/assets/css/components.css",
                       "~/content/assets/css/colors.css"));
 
             bundles.Add(new ScriptBundle("~/Content/assets/scripts-bundle").Include(
-                "~/content/assets/js/plugins/loaders/pace.min.js",
-                "~/content/assets/js/plugins/loaders/blockui.min.js",
                 "~/content/assets/js/plugins/forms/inputs/typeahead/handlebars.min.js",
-                "~/content/assets/js/plugins/forms/inputs/alpaca/alpaca.min.js",
-                "~/content/assets/js/plugsins/ui/ripple.min.js"
+                "~/content/assets/js/plugins/forms/inputs/alpaca/alpaca.min.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/inputmask-bundle").Include(
@@ -49,7 +44,6 @@ namespace yugen_gg
                 "~/Scripts/jquery.inputmask/jquery.inputmask.js",
                 "~/Scripts/jquery.inputmask/inputmask.extensions.js",
                 "~/Scripts/jquery.inputmask/inputmask.date.extensions.js",
-                //and other extensions you want to include
                 "~/Scripts/jquery.inputmask/inputmask.numeric.extensions.js"
                 ));
         }

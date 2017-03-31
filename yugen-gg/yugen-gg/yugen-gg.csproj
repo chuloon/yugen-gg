@@ -2685,10 +2685,10 @@
     <Content Include="Content\assets\css\font-awesome\scss\_screen-reader.scss" />
     <Content Include="Content\assets\css\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\assets\css\font-awesome\scss\_variables.scss" />
-    <None Include="Properties\PublishProfiles\yugen.gg - Web Deploy %282%29.pubxml" />
+    <Content Include="Properties\PublishProfiles\yugen.gg.publishsettings" />
     <None Include="Properties\PublishProfiles\yugen.gg - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\yugen.gg 2.0.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\firebase.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -2713,6 +2713,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-3.4.0.debug.js" />
     <Content Include="Scripts\knockout-3.4.0.js" />
+    <Content Include="Scripts\knockout-min.js" />
     <Content Include="Scripts\knockout.validation.js" />
     <Content Include="Scripts\knockout.validation.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />

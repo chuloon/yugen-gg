@@ -8,15 +8,15 @@
 
     <title>@ViewBag.Title | Yugen</title>
     @Styles.Render("~/Content/stylesheets-bundle")
-    @Scripts.Render("~/bundles/modernizr-bundle")
     @Styles.Render("~/Content/assets/styles-bundle")
 
+    @*@Scripts.Render("~/bundles/modernizr-bundle")*@
     @Scripts.Render("~/bundles/jquery-bundle")
-    @Scripts.Render("~/bundles/bootstrap-bundle")
+    @*@Scripts.Render("~/bundles/bootstrap-bundle")*@
     @Scripts.Render("~/Content/assets/scripts-bundle")
 
-    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+    <script src="~/Scripts/firebase.js"></script>
+    <script src="~/Scripts/knockout-min.js"></script>
 
     @RenderSection("scripts", required: false)
 
@@ -26,7 +26,7 @@
     }
 </head>
 <body>
-   @Scripts.Render("~/bundles/inputmask-bundle")
+   @*@Scripts.Render("~/bundles/inputmask-bundle")*@
     <script>
         // Initialize Firebase
         var config = {
