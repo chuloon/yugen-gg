@@ -12,7 +12,7 @@
 
     @*@Scripts.Render("~/bundles/modernizr-bundle")*@
     @Scripts.Render("~/bundles/jquery-bundle")
-    @Scripts.Render("~/bundles/bootstrap-bundle")
+    @*@Scripts.Render("~/bundles/bootstrap-bundle")*@
     @Scripts.Render("~/Content/assets/scripts-bundle")
 
     <script src="~/Scripts/firebase.js"></script>
@@ -75,7 +75,7 @@
             @Html.ActionLink("EVENTS", "Events", "Home")
         </div>
     </div>
-    <div class="body-content" style="margin-top: 100px;">
+    <div class="body-content">
         @RenderBody()
         <hr />
         <footer>

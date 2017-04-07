@@ -3,6 +3,20 @@
     font-family: 'Bebas';
 }
 
+.body-content {
+    margin-top: 60px;
+}
+
+/* Bootstrap XS styles */
+
+@media only screen and (max-width : 480px) {
+    .body-content {
+        margin-top: 0px;
+    }
+}
+
+/* End Bootstrap XS styles */
+
 .fa-10x {
     font-size: 10em !important;
 }
