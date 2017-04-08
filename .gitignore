@@ -1,1 +1,8 @@
 /yugen-gg/.vs/yugen-gg/v14/*.suo
+yugen-gg/.vs/config/applicationhost.config
+yugen-gg/yugen-gg/bin/yugen-gg.dll
+yugen-gg/yugen-gg/bin/yugen-gg.pdb
+yugen-gg/yugen-gg/obj/Debug/TypeScriptCompilerOutput.txt
+*.cache
+yugen-gg/yugen-gg/obj/Debug/yugen-gg.dll
+*.pdb
