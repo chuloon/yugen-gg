@@ -81,3 +81,13 @@
 .deck-class-select {
     margin-top: 15px;
 }
+
+#event-info {
+    background-color: #1abece;
+}
+
+.event-info-container {
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

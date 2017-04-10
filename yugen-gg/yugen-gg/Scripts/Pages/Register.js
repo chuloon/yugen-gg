@@ -154,3 +154,4 @@ function registerViewModel() {
     };
 }
 ko.applyBindings(new registerViewModel());
+//# sourceMappingURL=Register.js.map

@@ -9,3 +9,4 @@ $().ready(function () {
 function aboutViewModel() {
 }
 ko.applyBindings(new aboutViewModel());
+//# sourceMappingURL=About.js.map
