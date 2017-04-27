@@ -59,21 +59,21 @@
             <ul class="nav navbar-nav hidden-xs">
                 <li>@Html.ActionLink("HOME", "Index", "Home")</li>
                 <li>@Html.ActionLink("ABOUT", "About", "Home")</li>
-                @*<li>@Html.ActionLink("EVENTS", "Events", "Home", new { style="border-right: none" })</li>*@
+                <li>@Html.ActionLink("EVENTS", "Events", "Home")</li>
             </ul>
             @*@Html.Partial("_LoginPartial")*@
         </div>
     </div>
-    <div class="mobile-nav">
-        <div class="col-xs-6 text-center">
+    <div class="row mobile-nav">
+        <div class="col-xs-4 text-center">
             @Html.ActionLink("HOME", "Index", "Home")
         </div>
-        <div class="col-xs-6 text-center" style="border-right: none;">
+        <div class="col-xs-4 text-center">
             @Html.ActionLink("ABOUT", "About", "Home")
         </div>
-        @*<div class="col-xs-4 text-center">
+        <div class="col-xs-4 text-center">
             @Html.ActionLink("EVENTS", "Events", "Home")
-        </div>*@
+        </div>
     </div>
     <div class="body-content">
         @RenderBody()

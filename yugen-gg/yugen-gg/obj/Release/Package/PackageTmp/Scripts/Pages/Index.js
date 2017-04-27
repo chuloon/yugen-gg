@@ -58,7 +58,6 @@ function indexViewModel() {
         mainEventData.id(params.id);
         $('.active-event').addClass('inactive-event').removeClass('active-event');
         $('#' + params.id).removeClass('inactive-event').addClass('active-event');
-        $('#' + params.id + '-mobile').removeClass('inactive-event').addClass('active-event');
     };
     this.registerClick = function (params) {
         window.location.href = "/Register/" + params();
