@@ -48,57 +48,53 @@ namespace yugen_gg.Controllers
                 Decimal amountPaid = 0;
                 Decimal.TryParse(sAmountPaid, System.Globalization.NumberStyles.Number, System.Globalization.CultureInfo.InvariantCulture, out amountPaid);
 
-                if (amountPaid == 5)  // you might want to have a bigger than or equal to sign here!
+                IFirebaseConfig config = new FirebaseConfig
                 {
+                    AuthSecret = "OsprEPZtYgU1bP2xKP3OVujZIPt7tNo0BLrg0gO4",
+                    BasePath = "https://yugen-a088d.firebaseio.com/"
+                };
 
-                    IFirebaseConfig config = new FirebaseConfig
-                    {
-                        AuthSecret = "OsprEPZtYgU1bP2xKP3OVujZIPt7tNo0BLrg0gO4",
-                        BasePath = "https://yugen-a088d.firebaseio.com/"
-                    };
+                IFirebaseClient client = new FirebaseClient(config);
 
-                    IFirebaseClient client = new FirebaseClient(config);
-
-                    var setFlag = new paidFlag
-                    {
-                        paid = true
-                    };
-                    FirebaseResponse updateResponse = await client.UpdateAsync(buyerID, setFlag);
-
-                    FirebaseResponse getResponse = await client.GetAsync(buyerID);
-                    RegistrationUserHearthstone hsResponse = getResponse.ResultAs<RegistrationUserHearthstone>();
-
-                    MailMessage mail = new MailMessage("support@yugen.gg", hsResponse.basicInfo.email);
-
-                    SmtpClient mailClient = new SmtpClient("smtp.gmail.com", 587);
-                    mailClient.UseDefaultCredentials = false;
-                    mailClient.Credentials = new NetworkCredential("support@yugen.gg", "yugensupport");
-                    mailClient.EnableSsl = true;
-
-                    mail.Subject = "Yugen Registration Confirmation";
-                    mail.IsBodyHtml = true;
-                    mail.Body = "<p>Hello!</p><p>Your registration is complete and your payment has been received! Please check your inbox for the confirmation email. We're looking forward to seeing you there!</p>";
-
-                    mailClient.Send(mail);
-                }
-                else
+                var setFlag = new paidFlag
                 {
-                    //Payment failed because they paid the incorrect amount. I don't think this is possible...?
-                }
+                    paid = true
+                };
+                FirebaseResponse updateResponse = await client.UpdateAsync(buyerID, setFlag);
+
+                FirebaseResponse getResponse = await client.GetAsync(buyerID);
+                RegistrationUser hsResponse = getResponse.ResultAs<RegistrationUser>();
+
+                MailMessage mail = new MailMessage("ben@yugen.gg", hsResponse.basicInfo.email);
+
+                SmtpClient mailClient = new SmtpClient("smtp.gmail.com", 587);
+                mailClient.UseDefaultCredentials = false;
+                mailClient.Credentials = new NetworkCredential("ben@yugen.gg", "yugensupport");
+                mailClient.EnableSsl = true;
+
+                mail.Subject = "Yugen Registration Confirmation";
+                mail.IsBodyHtml = true;
+                mail.Body = "<p>Hello!</p><p>Your registration is complete and your payment has been received! Please check your inbox for the confirmation email from PayPal. We're looking forward to seeing you there!</p><p>If you have any questions, please feel free to reach out by responding to this email.</p><br /><span>Ben Ng</span><span>Yugen Raid Boss</span>";
+
+                mailClient.Send(mail);
             }
-
+            else
+            {
+                //The response is a failure. Something went wrong
+                //Someday when I'm a responsible developer, I'll put up some error handling here.
+            }
             return View("PaymentConfirmation");
         }
 
-        public class RegistrationUserHearthstone
+        public class RegistrationUser
         {
-            public basicInfoHearthstone basicInfo { get; set; }
+            public basicInfo basicInfo { get; set; }
             public string game { get; set; }
             public string id { get; set; }
             public bool paid { get; set; }
         }
 
-        public class basicInfoHearthstone
+        public class basicInfo
         {
             public string battleId { get; set; }
             public string email { get; set; }

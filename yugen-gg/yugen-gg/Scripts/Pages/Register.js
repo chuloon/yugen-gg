@@ -46,36 +46,72 @@ var hearthstoneObject = {
 };
 var leagueObject = {
     basicInfo: {
-        firstName: ko.observable("test").extend({ required: true }),
-        lastName: ko.observable("test").extend({ required: true }),
-        email: ko.observable("test@test.com").extend({ required: true, email: true }),
-        phone: ko.observable("5133848411").extend({ phoneUS: true, required: true }),
-        summoner: ko.observable("test").extend({ required: true })
+        firstName: ko.observable("").extend({ required: true }),
+        lastName: ko.observable("").extend({ required: true }),
+        email: ko.observable("").extend({ required: true, email: true }),
+        phone: ko.observable("").extend({ phoneUS: true, required: true }),
+        summoner: ko.observable("").extend({ required: true })
     },
     teamInfo: {
-        player2FirstName: ko.observable("test").extend({ required: true }),
-        player2LastName: ko.observable("test").extend({ required: true }),
-        player2Summoner: ko.observable("test").extend({ required: true }),
-        player3FirstName: ko.observable("test").extend({ required: true }),
-        player3LastName: ko.observable("test").extend({ required: true }),
-        player3Summoner: ko.observable("test").extend({ required: true }),
-        player4FirstName: ko.observable("test").extend({ required: true }),
-        player4LastName: ko.observable("test").extend({ required: true }),
-        player4Summoner: ko.observable("test").extend({ required: true }),
-        player5FirstName: ko.observable("test").extend({ required: true }),
-        player5LastName: ko.observable("test").extend({ required: true }),
-        player5Summoner: ko.observable("test").extend({ required: true }),
-        coachFirstName: ko.observable("test"),
-        coachLastName: ko.observable("test"),
-        sub1FirstName: ko.observable("test"),
-        sub1LastName: ko.observable("test"),
-        sub1Summoner: ko.observable("test"),
+        player2FirstName: ko.observable("").extend({ required: true }),
+        player2LastName: ko.observable("").extend({ required: true }),
+        player2Summoner: ko.observable("").extend({ required: true }),
+        player3FirstName: ko.observable("").extend({ required: true }),
+        player3LastName: ko.observable("").extend({ required: true }),
+        player3Summoner: ko.observable("").extend({ required: true }),
+        player4FirstName: ko.observable("").extend({ required: true }),
+        player4LastName: ko.observable("").extend({ required: true }),
+        player4Summoner: ko.observable("").extend({ required: true }),
+        player5FirstName: ko.observable("").extend({ required: true }),
+        player5LastName: ko.observable("").extend({ required: true }),
+        player5Summoner: ko.observable("").extend({ required: true }),
+        coachFirstName: ko.observable(""),
+        coachLastName: ko.observable(""),
+        sub1FirstName: ko.observable(""),
+        sub1LastName: ko.observable(""),
+        sub1Summoner: ko.observable(""),
         sub2FirstName: ko.observable(""),
         sub2LastName: ko.observable(""),
         sub2Summoner: ko.observable(""),
     },
     id: ko.observable(),
     game: 'League of Legends'
+};
+var overwatchObject = {
+    basicInfo: {
+        firstName: ko.observable("test").extend({ required: true }),
+        lastName: ko.observable("test").extend({ required: true }),
+        email: ko.observable("test@test.com").extend({ required: true, email: true }),
+        phone: ko.observable("5133848411").extend({ phoneUS: true, required: true }),
+        battleId: ko.observable("test").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } })
+    },
+    teamInfo: {
+        player2FirstName: ko.observable("").extend({ required: true }),
+        player2LastName: ko.observable("").extend({ required: true }),
+        player2battleId: ko.observable("").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        player3FirstName: ko.observable("").extend({ required: true }),
+        player3LastName: ko.observable("").extend({ required: true }),
+        player3battleId: ko.observable("").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        player4FirstName: ko.observable("").extend({ required: true }),
+        player4LastName: ko.observable("").extend({ required: true }),
+        player4battleId: ko.observable("").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        player5FirstName: ko.observable("").extend({ required: true }),
+        player5LastName: ko.observable("").extend({ required: true }),
+        player5battleId: ko.observable("").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        player6FirstName: ko.observable("").extend({ required: true }),
+        player6LastName: ko.observable("").extend({ required: true }),
+        player6battleId: ko.observable("").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        coachFirstName: ko.observable("test"),
+        coachLastName: ko.observable("test"),
+        sub1FirstName: ko.observable("test"),
+        sub1LastName: ko.observable("test"),
+        sub1battleId: ko.observable("test").extend({ pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        sub2FirstName: ko.observable(""),
+        sub2LastName: ko.observable(""),
+        sub2battleId: ko.observable("").extend({ pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+    },
+    id: ko.observable(),
+    game: 'Overwatch'
 };
 var errors = {
     hearthstone: undefined,
@@ -168,10 +204,25 @@ function registerViewModel() {
                 _this.hearthstoneRegistration();
             else if (game == 'league')
                 _this.leagueRegistration();
+            else if (game == 'overwatch')
+                _this.overwatchRegistratioin();
         }
         else {
             errors[game].showAllMessages();
         }
+    };
+    this.getPayPalReturnUrl = function (eventId, game, registrationId) {
+        var retObj = {
+            custom: 'registration/' + eventId + '/' + game + '/' + registrationId,
+            price: undefined
+        };
+        if (game == 'hearthstone')
+            retObj.price = eventData().entryPrice + eventData().venuePrice;
+        else if (game == 'league')
+            retObj.price = (eventData().entryPrice + eventData().venuePrice) * 5;
+        else if (game == 'overwatch')
+            retObj.price = (eventData().entryPrice + eventData().venuePrice) * 6;
+        return retObj;
     };
     this.hearthstoneRegistration = function () {
         var returnBool = false;
@@ -218,6 +269,33 @@ function registerViewModel() {
                 }
                 if (!returnBool) {
                     var pushResult = firebase.database().ref('/registration/' + eventId() + '/league/').push(self.leagueObjectUnwrapped);
+                    registrationId(pushResult.key);
+                    confirmCheckout(true);
+                }
+            });
+        }
+        catch (ex) {
+            alert("Invalid registration input. Please try again!");
+        }
+    };
+    this.overwatchRegistration = function () {
+        var returnBool = false;
+        overwatchObject.id(overwatchObject.basicInfo.firstName() + overwatchObject.basicInfo.lastName() + Math.floor(Math.random() * 1000) + 1);
+        self.leagueObjectUnwrapped = ko.toJS(leagueObject);
+        try {
+            return firebase.database().ref('/registration/' + eventId()).once('value').then(function (result) {
+                if (result.val() != null) {
+                    $.each(result.val(), function (index, item) {
+                        if (index == registrationId()) {
+                            firebase.database().ref('/registration/' + eventId() + '/overwatch/' + registrationId()).set(self.overwatchObjectUnwrapped);
+                            registrationId(index);
+                            confirmCheckout(true);
+                            returnBool = true;
+                        }
+                    });
+                }
+                if (!returnBool) {
+                    var pushResult = firebase.database().ref('/registration/' + eventId() + '/overwatch/').push(self.overwatchObjectUnwrapped);
                     registrationId(pushResult.key);
                     confirmCheckout(true);
                 }

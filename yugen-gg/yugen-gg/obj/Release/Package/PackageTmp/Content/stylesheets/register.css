@@ -37,12 +37,12 @@
     /*max-height: 700px;*/
 }
 
-#hearthstone-form-container, #league-form-container {
+#hearthstone-form-container, #league-form-container, #overwatch-form-container {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#hearthstone-form-container input, #league-form-container input {
+#hearthstone-form-container input, #league-form-container input, #overwatch-form-container input {
     border-bottom-color: #415ba6;
     max-width: initial;
     margin-top: 15px;
