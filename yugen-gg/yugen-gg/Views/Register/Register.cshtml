@@ -13,7 +13,7 @@
     isBusy(true);
     firebase.database().ref('/events/@ViewBag.id').once('value').then((result) => {
         eventData(result.val());
-        gameList(eventData().games.split(','));
+        gameList(eventData().games.split(', '));
         eventId("@ViewBag.id");
         loadComplete(true);
         isBusy(false);
@@ -36,6 +36,7 @@
 
 <div class="row section-separator visible-xs"></div>
 
+<!-- ko if: !confirmCheckout()-->
 <div id="game-select" class="row">
     <div class="col-xs-12">
         <h4 class="game-select-text">Pick a game</h4>
@@ -48,14 +49,17 @@
         <!-- /ko -->
     </div>
 </div>
+<!-- /ko -->
 
 <div class="row section-separator"></div>
 
+<!-- ko if: selectedGame() -->
 <div id="register-form" class="row" data-bind="css: formVisible() ? 'form-shown' : 'form-hidden'">
     <div class="col-xs-12">
-        <div id="hearthstone-form-container" data-bind="template: { name: 'hearthstone-form' }"></div>
+        <div data-bind="template: { name: selectedGame() + '-form' }, attr: { id: selectedGame() + '-form-container' }"></div>
     </div>
 </div>
+<!-- /ko -->
 
 <div class="row section-separator"></div>
 
@@ -70,26 +74,244 @@
                 @* Example link: https://blog.artemlos.net/posts/a-simple-way-to-integrate-paypal-into-asp-net-mvc-4/ *@
                 @* Production action="https://www.paypal.com/cgi-bin/webscr" *@
                 @* Sandbox action="https://www.sandbox.paypal.com/cgi-bin/webscr" *@
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <!-- ko if: selectedGame() == 'hearthstone' -->
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
                     <fieldset>
-                        <input class="full-width" type="hidden" name="business" value="support@yugen.gg" />
+                        <input class="full-width" type="hidden" name="business" value="ben@yugen.gg" />
                         <input type="hidden" name="cmd" value="_xclick" />
                         <input type="hidden" name="item_name" value="Hearthstone Registration" />
                         <input type="hidden" name="amount" data-bind="attr: { value: eventData().entryPrice }" />
                         <input type="hidden" name="no_shipping" value="1" />
-                        <input type="hidden" name="notify_url" value="http://yugen.gg/Payment/IPN" />
-                        <input type="hidden" name="custom" data-bind="attr: { value: 'registration/' + eventId() + '/' + registrationId() }" />
+                        <input type="hidden" name="notify_url" value="http://6149d605.ngrok.io/Payment/IPN" />
+                        <input type="hidden" name="custom" data-bind="attr: { value: 'registration/' + eventId() + '/hearthstone/' + registrationId() }" />
 
                         <button class="btn btn-primary highlights-button register-button pull-right" type="submit">Checkout</button>
                         <button class="btn btn-link pull-right cancel-btn" data-bind="click: $data.cancelClick">Cancel</button>
                     </fieldset>
                 </form>
+                <!-- /ko -->
+                <!-- ko if: selectedGame() == 'league' -->
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                    <fieldset>
+                        <input class="full-width" type="hidden" name="business" value="ben@yugen.gg" />
+                        <input type="hidden" name="cmd" value="_xclick" />
+                        <input type="hidden" name="item_name" value="League of Legends Registration" />
+                        <input type="hidden" name="amount" data-bind="attr: { value: function() { return (eventData().entryPrice + eventData().venuePrice)*5 }() }" />
+                        <input type="hidden" name="no_shipping" value="1" />
+                        <input type="hidden" name="notify_url" value="http://6149d605.ngrok.io/Payment/IPN" />
+                        <input type="hidden" name="custom" data-bind="attr: { value: 'registration/' + eventId() + '/hearthstone/' + registrationId() }" />
+
+                        <button class="btn btn-primary highlights-button register-button pull-right" type="submit">Checkout</button>
+                        <button class="btn btn-link pull-right cancel-btn" data-bind="click: $data.cancelClick">Cancel</button>
+                    </fieldset>
+                </form>
+                <!-- /ko -->
             </div>
         </div>
     </div>
 </div>
 
 <!-- /ko -->
+
+<script id="league-form" type="text/html">
+    <div class="row">
+        @* Captain Information *@
+        <div class="col-xs-12 col-md-3">
+            <div class="panel">
+                <div class="panel-body">
+                    <h3>Captain Information</h3>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: leagueObject.basicInfo.firstName, disable: confirmCheckout" />
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: leagueObject.basicInfo.lastName, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input type="text" class="alpaca-control form-control" placeholder="email" data-bind="value: leagueObject.basicInfo.email, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input type="text" class="alpaca-control form-control phone-field" placeholder="phone" data-bind="value: leagueObject.basicInfo.phone, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8 col-md-offset-2">
+                            <input type="text" class="alpaca-control form-control" placeholder="summoner" data-bind="value: leagueObject.basicInfo.summoner, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* Team Information *@
+        <div class="col-xs-12 col-md-3">
+            <div class="panel">
+                <div class="panel-body">
+                    <h3>Team Information</h3>
+
+                    @* Player 2 *@
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <h4 class="player-label">P2</h4>
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: leagueObject.teamInfo.player2FirstName, disable: confirmCheckout" />
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: leagueObject.teamInfo.player2LastName, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10 col-md-offset-2">
+                            <input type="text" class="alpaca-control form-control" placeholder="summoner" data-bind="value: leagueObject.teamInfo.player2Summoner, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    @* End Player *@
+
+                    <hr class="team-separator" />
+
+                    @* Player 3 *@
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <h4 class="player-label">P3</h4>
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: leagueObject.teamInfo.player3FirstName, disable: confirmCheckout" />
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: leagueObject.teamInfo.player3LastName, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10 col-md-offset-2">
+                            <input type="text" class="alpaca-control form-control" placeholder="summoner" data-bind="value: leagueObject.teamInfo.player3Summoner, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    @* End Player *@
+
+                    <hr class="team-separator" />
+
+                    @* Player 4 *@
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <h4 class="player-label">P4</h4>
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: leagueObject.teamInfo.player4FirstName, disable: confirmCheckout" />
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: leagueObject.teamInfo.player4LastName, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10 col-md-offset-2">
+                            <input type="text" class="alpaca-control form-control" placeholder="summoner" data-bind="value: leagueObject.teamInfo.player4Summoner, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    @* End Player *@
+
+                    <hr class="team-separator" />
+
+                    @* Player 5 *@
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <h4 class="player-label">P5</h4>
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: leagueObject.teamInfo.player5FirstName, disable: confirmCheckout" />
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: leagueObject.teamInfo.player5LastName, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10 col-md-offset-2">
+                            <input type="text" class="alpaca-control form-control" placeholder="summoner" data-bind="value: leagueObject.teamInfo.player5Summoner, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    @* End Player *@
+                </div>
+            </div>
+        </div>
+
+        @* Coaches and Subs *@
+        <div class="col-xs-12 col-md-3">
+            <div class="panel">
+                <div class="panel-body">
+                    <h3>Coaches and Substitutes</h3>
+                    <p class="secondary-font">Coaches and subs must register separately as general guests, meaning they only have to pay the venue fee if they choose to attend. Since they are not playing in the general tournament, no tournament fee is required. A maximum of one coach and two substitutes are allowed per team.</p>
+                    <p class="secondary-font">If you have coaches and subs, please fill their names out below, but keep in mind they must register separately!</p>
+
+                    @* Coach *@
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <h4 class="player-label">C</h4>
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: leagueObject.teamInfo.coachFirstName, disable: confirmCheckout" />
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: leagueObject.teamInfo.coachLastName, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    @* End Coach *@
+
+                    <hr class="team-separator" />
+
+                    @* Sub 1 *@
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <h4 class="player-label">S1</h4>
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: leagueObject.teamInfo.sub1FirstName, disable: confirmCheckout" />
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: leagueObject.teamInfo.sub1LastName, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10 col-md-offset-2">
+                            <input type="text" class="alpaca-control form-control" placeholder="summoner" data-bind="value: leagueObject.teamInfo.sub1Summoner, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    @* End Player *@
+
+                    <hr class="team-separator" />
+
+                    @* Sub 2 *@
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <h4 class="player-label">S2</h4>
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: leagueObject.teamInfo.sub2FirstName, disable: confirmCheckout" />
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: leagueObject.teamInfo.sub2LastName, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10 col-md-offset-2">
+                            <input type="text" class="alpaca-control form-control" placeholder="summoner" data-bind="value: leagueObject.teamInfo.sub2Summoner, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    @* End Player *@
+                </div>
+            </div>
+        </div>
+
+        @* Register *@
+        <div class="col-xs-12 col-md-3 register-button-container">
+            <button class="btn btn-primary highlights-button register-button pull-right" data-bind="click: function() { $data.registerClick('league') }, visible: confirmCheckout() == false">Next</button>
+        </div>
+    </div>
+</script>
 
 <script id="hearthstone-form" type="text/html">
     <div class="row">
@@ -113,7 +335,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <input id="hearthstone-phone" type="text" class="alpaca-control form-control" placeholder="phone" data-bind="value: hearthstoneObject.basicInfo.phone, disable: confirmCheckout" />
+                            <input type="text" class="alpaca-control form-control phone-field" placeholder="phone" data-bind="value: hearthstoneObject.basicInfo.phone, disable: confirmCheckout" />
                         </div>
                     </div>
                     <div class="row">
@@ -144,14 +366,14 @@
             <div class="panel">
                 <div class="panel-body">
                     <h3>Deck Lists</h3>
+                    <p class="secondary-font">Our Tournament Organizer will reach out to you to get these!</p>
                 </div>
             </div>
         </div>
 
         @* Register *@
         <div class="col-xs-12 col-md-3 register-button-container">
-
-            <button class="btn btn-primary highlights-button register-button pull-right" data-bind="click: $data.registerClick, visible: confirmCheckout() == false">Next</button>
+            <button class="btn btn-primary highlights-button register-button pull-right" data-bind="click: function() { $data.registerClick('hearthstone') }, visible: confirmCheckout() == false">Next</button>
         </div>
     </div>
 </script>

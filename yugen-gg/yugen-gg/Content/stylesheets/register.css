@@ -37,12 +37,12 @@
     /*max-height: 700px;*/
 }
 
-#hearthstone-form-container {
+#hearthstone-form-container, #league-form-container {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#hearthstone-form-container input {
+#hearthstone-form-container input, #league-form-container input {
     border-bottom-color: #415ba6;
     max-width: initial;
     margin-top: 15px;
@@ -90,4 +90,13 @@
     color: #fff;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.player-label {
+    margin-top: 23px;
+    margin-bottom: 0px;
+}
+
+.team-separator {
+    margin-bottom: 0px;
 }

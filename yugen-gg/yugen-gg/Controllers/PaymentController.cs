@@ -30,7 +30,7 @@ namespace yugen_gg.Controllers
             // Receive IPN request from PayPal and parse all the variables returned
             var formVals = new Dictionary<string, string>();
             formVals.Add("cmd", "_notify-synch"); //notify-synch_notify-validate
-            formVals.Add("at", "si-ybLuZaapE9ySInDhgmULM2Xoc8IxPot3IKq2LP240wkkRNT9rx_a6kSK"); // this has to be adjusted
+            formVals.Add("at", "f8joYpcZABMVhK8wNpcdWsVlmLmQ_N1-48FX3gb5YPXSU4SA0wKanTQwZvy"); // this has to be adjusted
             formVals.Add("tx", Request["tx"]);
 
             string response = GetPayPalResponse(formVals, false);
