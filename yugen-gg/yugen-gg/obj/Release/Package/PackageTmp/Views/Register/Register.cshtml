@@ -30,13 +30,19 @@
 
 <h1 data-bind="text: eventData().name"></h1>
 
+<div id="event-info" class="row">
+    <div class="col-xs-12 visible-xs secondary-font event-info-container" data-bind="html: eventData().longDescription"></div>
+</div>
+
+<div class="row section-separator visible-xs"></div>
+
 <div id="game-select" class="row">
     <div class="col-xs-12">
         <h4 class="game-select-text">Pick a game</h4>
     </div>
     <div class="col-xs-12">
         <!-- ko foreach: gameList -->
-        <div class="col-xs-3">
+        <div class="col-xs-12 col-sm-6 col-md-3">
             <img class="game-select-item" width="100%" data-bind="attr: { src: '/Content/img/register/' + $data + '.png', id: $data + '-item' }, click: function(){ $parent.showForm($data); }" />
         </div>
         <!-- /ko -->

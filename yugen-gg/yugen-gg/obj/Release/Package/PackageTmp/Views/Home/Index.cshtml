@@ -11,7 +11,7 @@
         <div class="col-md-6 col-md-offset-3 col-xs-12">
             <div class="row text-center">
                 <div class="col-xs-12">
-                    <img src="~/Content/img/index/logo-large.png" width="100%" />
+                    <img style="padding-top: 20px;" src="~/Content/img/index/logo-large.png" width="100%" />
                 </div>
             </div>
             <div class="row">
@@ -25,7 +25,7 @@
 
 <div class="row section-separator"></div>
 
-<div id="events-section" class="row">
+<div id="events-section" class="row hidden-xs">
     <div id="event-list" class="col-xs-12 col-md-3">
         <!-- ko foreach: eventsArray -->
         <div class="panel" data-bind="css: $index() != 0 ? 'inactive-event' : 'active-event', click: function(){ $parent.eventClick($data) }, attr: { id: $data.id }">
@@ -69,6 +69,24 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div id="events-section" class="row visible-xs" style="padding-left: initial; padding-right: initial">
+    <div class="col-xs-12">
+        <!-- ko foreach: eventsArray -->
+        <div class="event-container">
+            <div class="panel mobile-panel" data-bind="css: $index() != 0 ? 'inactive-event' : 'active-event', click: function(){ $parent.eventClick($data) }, attr: { id: $data.id + '-mobile' }">
+                <div class="panel-body">
+                    <h2 data-bind="text: $data.name" style="margin-top: 10px; margin-bottom: 0px;"></h2>
+                    <span data-bind="text: $data.date"></span>
+                </div>
+            </div>
+            <div class="mobile-details">
+                <span data-bind="text: $data.locationShort"></span>
+                <span data-bind="click: function(){ $parent.registerClick(mainEventData.id) }" class="pull-right" style="color: white;">View Details</span>
+            </div>
+        </div>
+        <!-- /ko -->
     </div>
 </div>
 
