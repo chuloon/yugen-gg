@@ -95,27 +95,3 @@
 .inactive-event:hover {
     opacity: 0.7;
 }
-
-.mobile-panel {
-    margin-bottom: 0px;
-}
-
-.mobile-details {
-    padding: 5px;
-    background-color: #fcb437;
-}
-
-.active-event + .mobile-details {
-    height: initial;
-    transition: height 1s;
-}
-
-.inactive-event + .mobile-details {
-    height: 0px;
-    display: none;
-    transition: height 1s;
-}
-
-.event-container {
-    margin-bottom: 10px;
-}

@@ -35,6 +35,7 @@
 
 .form-shown {
     /*max-height: 700px;*/
+    max-height: 700px;
 }
 
 #hearthstone-form-container, #league-form-container, #overwatch-form-container {
@@ -80,16 +81,6 @@
 
 .deck-class-select {
     margin-top: 15px;
-}
-
-#event-info {
-    background-color: #1abece;
-}
-
-.event-info-container {
-    color: #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 .player-label {
