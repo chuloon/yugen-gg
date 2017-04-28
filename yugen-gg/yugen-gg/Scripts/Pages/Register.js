@@ -79,11 +79,11 @@ var leagueObject = {
 };
 var overwatchObject = {
     basicInfo: {
-        firstName: ko.observable("test").extend({ required: true }),
-        lastName: ko.observable("test").extend({ required: true }),
-        email: ko.observable("test@test.com").extend({ required: true, email: true }),
-        phone: ko.observable("5133848411").extend({ phoneUS: true, required: true }),
-        battleId: ko.observable("test").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } })
+        firstName: ko.observable("").extend({ required: true }),
+        lastName: ko.observable("").extend({ required: true }),
+        email: ko.observable("").extend({ required: true, email: true }),
+        phone: ko.observable("").extend({ phoneUS: true, required: true }),
+        battleId: ko.observable("").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } })
     },
     teamInfo: {
         player2FirstName: ko.observable("").extend({ required: true }),
@@ -101,11 +101,11 @@ var overwatchObject = {
         player6FirstName: ko.observable("").extend({ required: true }),
         player6LastName: ko.observable("").extend({ required: true }),
         player6battleId: ko.observable("").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
-        coachFirstName: ko.observable("test"),
-        coachLastName: ko.observable("test"),
-        sub1FirstName: ko.observable("test"),
-        sub1LastName: ko.observable("test"),
-        sub1battleId: ko.observable("test").extend({ pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        coachFirstName: ko.observable(""),
+        coachLastName: ko.observable(""),
+        sub1FirstName: ko.observable(""),
+        sub1LastName: ko.observable(""),
+        sub1battleId: ko.observable("").extend({ pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
         sub2FirstName: ko.observable(""),
         sub2LastName: ko.observable(""),
         sub2battleId: ko.observable("").extend({ pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),

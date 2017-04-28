@@ -93,11 +93,11 @@ let leagueObject = {
 
 let overwatchObject = {
     basicInfo: {
-        firstName: ko.observable<string>("test").extend({ required: true }),
-        lastName: ko.observable<string>("test").extend({ required: true }),
-        email: ko.observable<string>("test@test.com").extend({ required: true, email: true }),
-        phone: ko.observable<string>("5133848411").extend({ phoneUS: true, required: true }),
-        battleId: ko.observable<string>("test").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' }  })
+        firstName: ko.observable<string>("").extend({ required: true }),
+        lastName: ko.observable<string>("").extend({ required: true }),
+        email: ko.observable<string>("").extend({ required: true, email: true }),
+        phone: ko.observable<string>("").extend({ phoneUS: true, required: true }),
+        battleId: ko.observable<string>("").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' }  })
     },
     teamInfo: {
         player2FirstName: ko.observable<string>("").extend({ required: true }),
@@ -120,12 +120,12 @@ let overwatchObject = {
         player6LastName: ko.observable<string>("").extend({ required: true }),
         player6battleId: ko.observable<string>("").extend({ required: true, pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' }  }),
 
-        coachFirstName: ko.observable<string>("test"),
-        coachLastName: ko.observable<string>("test"),
+        coachFirstName: ko.observable<string>(""),
+        coachLastName: ko.observable<string>(""),
 
-        sub1FirstName: ko.observable<string>("test"),
-        sub1LastName: ko.observable<string>("test"),
-        sub1battleId: ko.observable<string>("test").extend({ pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
+        sub1FirstName: ko.observable<string>(""),
+        sub1LastName: ko.observable<string>(""),
+        sub1battleId: ko.observable<string>("").extend({ pattern: { message: 'Invalid BattleTag', params: '^\\D.{2,11}#\\d{4,5}$' } }),
 
         sub2FirstName: ko.observable<string>(""),
         sub2LastName: ko.observable<string>(""),

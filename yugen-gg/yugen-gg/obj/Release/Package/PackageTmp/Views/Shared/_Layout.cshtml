@@ -11,7 +11,8 @@
     @Styles.Render("~/Content/assets/styles-bundle")
 
     @*@Scripts.Render("~/bundles/modernizr-bundle")*@
-    @Scripts.Render("~/bundles/jquery-bundle")
+    @*@Scripts.Render("~/bundles/jquery-bundle")*@
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     @*@Scripts.Render("~/bundles/bootstrap-bundle")*@
     @Scripts.Render("~/Content/assets/scripts-bundle")
 
@@ -79,7 +80,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Yugen LLC</p>
+            <p>&copy; @DateTime.Now.Year - Yugen LLC <span class="pull-right">Having trouble? Please email <a href="mailto:ben@yugen.gg">ben@yugen.gg</a></span></p>
+            
         </footer>
     </div>
 </body>
