@@ -34,6 +34,16 @@ let deckClasses = ko.observableArray([
     "Warrior"
 ]);
 
+let generalObject = {
+    basicInfo: {
+        firstName: ko.observable<string>().extend({ required: true }),
+        lastName: ko.observable<string>().extend({ required: true }),
+        email: ko.observable<string>().extend({ required: true, email: true })
+    },
+    id: ko.observable<string>(),
+    game: 'General'
+}
+
 let hearthstoneObject = {
     basicInfo: {
         firstName: ko.observable<string>().extend({ required: true }),
@@ -137,10 +147,14 @@ let overwatchObject = {
 
 let errors = {
     hearthstone: undefined,
-    league: undefined
+    league: undefined,
+    overwatch: undefined,
+    general: undefined
 };
 errors.hearthstone = ko.validation.group(hearthstoneObject, { deep: true });
 errors.league = ko.validation.group(leagueObject, { deep: true });
+errors.overwatch = ko.validation.group(overwatchObject, { deep: true });
+errors.general = ko.validation.group(generalObject, { deep: true });
 
 hearthstoneObject.basicInfo.deckClass1.extend({
     validation: {
@@ -234,13 +248,14 @@ function registerViewModel() {
     this.registerClick = (game) => {
 
         if (errors[game]().length == 0) {
-            console.log(eventData());
             if (game == 'hearthstone')
-                this.hearthstoneRegistration();
+                this.processRegistration(hearthstoneObject, game);
             else if (game == 'league')
-                this.leagueRegistration();
+                this.processRegistration(leagueObject, game);
             else if (game == 'overwatch')
-                this.overwatchRegistratioin();
+                this.processRegistration(overwatchObject, game);
+            else if (game == 'general')
+                this.processRegistration(generalObject, game);
         }
         else {
             errors[game].showAllMessages();
@@ -260,21 +275,24 @@ function registerViewModel() {
             retObj.price = (eventData().entryPrice + eventData().venuePrice) * 5;
         else if (game == 'overwatch')
             retObj.price = (eventData().entryPrice + eventData().venuePrice) * 6;
+        else if (game == 'general')
+            retObj.price = eventData().venuePrice;
 
         return retObj;
     }
 
-    this.hearthstoneRegistration = () => {
+    this.processRegistration = (data, game) => {
         let returnBool = false;
 
-        hearthstoneObject.id(hearthstoneObject.basicInfo.firstName() + hearthstoneObject.basicInfo.lastName() + Math.floor(Math.random() * 1000) + 1);
-        self.hsObjectUnwrapped = ko.toJS(hearthstoneObject);
+        data.id(generalObject.basicInfo.firstName() + data.basicInfo.lastName() + Math.floor(Math.random() * 1000 + 1));
+        self.dataUnwrapped = ko.toJS(data);
+
         try {
             return firebase.database().ref('/registration/' + eventId()).once('value').then((result) => {
                 if (result.val() != null) {
                     $.each(result.val(), (index, item) => {
                         if (index == registrationId()) {
-                            firebase.database().ref('/registration/' + eventId() + '/hearthstone/' + registrationId()).set(self.hsObjectUnwrapped);
+                            firebase.database.ref('/registration/' + eventId() + '/' + game + '/' + registrationId()).set(self.dataUnwrapped);
                             registrationId(index);
                             confirmCheckout(true);
                             returnBool = true;
@@ -283,74 +301,11 @@ function registerViewModel() {
                 }
 
                 if (!returnBool) {
-                    let pushResult = firebase.database().ref('/registration/' + eventId() + '/hearthstone/').push(self.hsObjectUnwrapped);
+                    let pushResult = firebase.database().ref('/registration/' + eventId() + '/' + game + '/').push(self.dataUnwrapped);
                     registrationId(pushResult.key);
                     confirmCheckout(true);
                 }
             });
-
-        }
-        catch (ex) {
-            alert("Invalid registration input. Please try again!");
-        }
-    }
-
-    this.leagueRegistration = () => {
-        let returnBool = false;
-
-        leagueObject.id(leagueObject.basicInfo.firstName() + leagueObject.basicInfo.lastName() + Math.floor(Math.random() * 1000) + 1);
-        self.leagueObjectUnwrapped = ko.toJS(leagueObject);
-        try {
-            return firebase.database().ref('/registration/' + eventId()).once('value').then((result) => {
-                if (result.val() != null) {
-                    $.each(result.val(), (index, item) => {
-                        if (index == registrationId()) {
-                            firebase.database().ref('/registration/' + eventId() + '/league/' + registrationId()).set(self.leagueObjectUnwrapped);
-                            registrationId(index);
-                            confirmCheckout(true);
-                            returnBool = true;
-                        }
-                    });
-                }
-
-                if (!returnBool) {
-                    let pushResult = firebase.database().ref('/registration/' + eventId() + '/league/').push(self.leagueObjectUnwrapped);
-                    registrationId(pushResult.key);
-                    confirmCheckout(true);
-                }
-            });
-
-        }
-        catch (ex) {
-            alert("Invalid registration input. Please try again!");
-        }
-    }
-
-    this.overwatchRegistration = () => {
-        let returnBool = false;
-
-        overwatchObject.id(overwatchObject.basicInfo.firstName() + overwatchObject.basicInfo.lastName() + Math.floor(Math.random() * 1000) + 1);
-        self.leagueObjectUnwrapped = ko.toJS(leagueObject);
-        try {
-            return firebase.database().ref('/registration/' + eventId()).once('value').then((result) => {
-                if (result.val() != null) {
-                    $.each(result.val(), (index, item) => {
-                        if (index == registrationId()) {
-                            firebase.database().ref('/registration/' + eventId() + '/overwatch/' + registrationId()).set(self.overwatchObjectUnwrapped);
-                            registrationId(index);
-                            confirmCheckout(true);
-                            returnBool = true;
-                        }
-                    });
-                }
-
-                if (!returnBool) {
-                    let pushResult = firebase.database().ref('/registration/' + eventId() + '/overwatch/').push(self.overwatchObjectUnwrapped);
-                    registrationId(pushResult.key);
-                    confirmCheckout(true);
-                }
-            });
-
         }
         catch (ex) {
             alert("Invalid registration input. Please try again!");

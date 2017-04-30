@@ -43,7 +43,7 @@
     </div>
     <div class="col-xs-12">
         <!-- ko foreach: gameList -->
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="col-xs-12 col-sm-6 col-md-2">
             <img class="game-select-item" width="100%" data-bind="attr: { src: '/Content/img/register/' + $data + '.png', id: $data + '-item' }, click: function(){ $parent.showForm($data); }" />
         </div>
         <!-- /ko -->
@@ -94,6 +94,49 @@
 </div>
 
 <!-- /ko -->
+
+<script id="general-form" type="text/html">
+    <div class="row">
+        @* Basic Information *@
+        <div class="col-xs-12 col-md-3">
+            <div class="panel">
+                <div class="panel-body">
+                    <h3>Basic Information</h3>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: generalObject.basicInfo.firstName, disable: confirmCheckout" />
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: generalObject.basicInfo.lastName, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input type="text" class="alpaca-control form-control" placeholder="email" data-bind="value: generalObject.basicInfo.email, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* Register *@
+        <div class="col-xs-12 col-md-3 register-button-container">
+            <button class="btn btn-primary highlights-button register-button pull-right" data-bind="click: function() { $data.registerClick('general') }, visible: confirmCheckout() == false">Next</button>
+        </div>
+    </div>
+</script>
+
+<script id="smash-form" type="text/html">
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            <div class="panel">
+                <div class="panel-body">
+                    <h3 class="secondary-font">We're still finalizing some details on this tournament, so we aren't quite ready for registration on Smash yet!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
 
 <script id="overwatch-form" type="text/html">
     <div class="row">
@@ -556,10 +599,10 @@
                 <div class="panel-body">
                     <h3>Deck Class Selection</h3>
 
-                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass1, optionsCaption: 'Select'" style="margin-top: 25px;"></select>
-                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass2, optionsCaption: 'Select'"></select>
-                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass3, optionsCaption: 'Select'"></select>
-                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass4, optionsCaption: 'Select'"></select>
+                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass1, optionsCaption: 'Select', disable: confirmCheckout" style="margin-top: 25px;"></select>
+                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass2, optionsCaption: 'Select', disable: confirmCheckout"></select>
+                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass3, optionsCaption: 'Select', disable: confirmCheckout"></select>
+                    <select class="form-control deck-class-select" data-bind="options: deckClasses, value: hearthstoneObject.basicInfo.deckClass4, optionsCaption: 'Select', disable: confirmCheckout"></select>
                 </div>
             </div>
         </div>

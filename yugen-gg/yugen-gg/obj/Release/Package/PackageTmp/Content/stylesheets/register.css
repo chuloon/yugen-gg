@@ -33,17 +33,12 @@
     max-height: 0px;
 }
 
-.form-shown {
-    /*max-height: 700px;*/
-    max-height: 700px;
-}
-
-#hearthstone-form-container, #league-form-container, #overwatch-form-container {
+#hearthstone-form-container, #league-form-container, #overwatch-form-container, #smash-form-container, #general-form-container {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#hearthstone-form-container input, #league-form-container input, #overwatch-form-container input {
+#hearthstone-form-container input, #league-form-container input, #overwatch-form-container input, #smash-form-container input, #general-form-container input {
     border-bottom-color: #415ba6;
     max-width: initial;
     margin-top: 15px;
@@ -81,6 +76,16 @@
 
 .deck-class-select {
     margin-top: 15px;
+}
+
+#event-info {
+    background-color: #1abece;
+}
+
+.event-info-container {
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .player-label {
