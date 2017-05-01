@@ -1,0 +1,23 @@
+﻿.event-panel {
+    padding: 0px;
+    cursor: pointer;
+}
+
+.event-panel-body {
+    padding-top: 15px;
+}
+
+#events-ribbon {
+    padding: 30px;
+    background-color: #415ba6;
+}
+
+#registration-ribbon {
+    padding: 30px;
+    background-color: #1abece;
+}
+
+.events-title {
+    color: #fff;
+    margin-top: 0px;
+}

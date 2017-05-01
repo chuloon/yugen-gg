@@ -1,0 +1,26 @@
+﻿input.alpaca-control.form-control {
+    border-bottom-color: #415ba6;
+    max-width: initial;
+    margin-top: 15px;
+}
+
+.login-title {
+    margin-top: 0px;
+}
+
+.login-container {
+    margin-top: 20px;
+}
+
+.highlights-button {
+    background-color: #fcb437;
+    border: 2px solid white;
+    border-radius: 0px;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+}
+
+.submit-button {
+    border-radius: 0px;
+    margin-top: 10px;
+}

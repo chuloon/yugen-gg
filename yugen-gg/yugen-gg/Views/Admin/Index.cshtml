@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+    ViewBag.Title = "Admin";
+}
+
+@section AddToHead {
+    <link type="text/css" rel="stylesheet" href="~/Content/stylesheets/admin/index.css" />
+}
+
+<div id="events-ribbon" class="row">
+    <h1 class="events-title">Manage Event Information</h1>
+    <!-- ko foreach: eventsArray -->
+    <div class="col-xs-3">
+        <div class="panel">
+            <div class="panel-body event-panel">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img class="img-responsive" height="100" data-bind="attr: { src: $data.eventThumb }" />
+                    </div>
+                    <div class="col-xs-8 event-panel-body">
+                        <h2 data-bind="text: $data.name" style="margin-top: 0px;"></h2>
+                        <p data-bind="text: $data.date" style="margin-bottom: 0px;"></p>
+                        <p data-bind="text: $data.locationShort"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+<div class="row section-separator"></div>
+
+<!-- ko ifnot: isBusy -->
+<div id="registration-ribbon" class="row">
+    <h1 class="events-title">Manage Registrations</h1>
+    <!-- ko foreach: eventsArray -->
+    <div class="col-xs-3">
+        <div class="panel">
+            <div class="panel-body event-panel">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img class="img-responsive" height="100" data-bind="attr: { src: $data.eventThumb }" />
+                    </div>
+                    <div class="col-xs-8 event-panel-body">
+                        <h2 data-bind="text: $data.name" style="margin-top: 0px;"></h2>
+                        <p class="secondary-font" data-bind="text: 'Total Registrations: ' + $parent.getRegistrationNumbers($data.id)"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+<!-- /ko -->
+
+<script src="~/Scripts/Pages/Admin/Index.js"></script>

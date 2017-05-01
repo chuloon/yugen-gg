@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+    ViewBag.Title = "Admin Login";
+}
+
+@section AddToHead {
+    <link type="text/css" rel="stylesheet" href="~/Content/stylesheets/admin/login.css" />
+    <script type="text/javascript" src="~/Scripts/knockout.validation.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.3/jquery.mask.js"></script>
+}
+
+
+<div class="row">
+    <div class="col-xs-12 col-md-2 col-md-offset-5">
+        <div class="panel login-container">
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <h1 class="login-title">Login</h1>
+                    <input type="text" class="alpaca-control form-control" placeholder="email" data-bind="value: loginObject.userName" />
+                </div>
+                <div class="col-xs-12">
+                    <input type="password" class="alpaca-control form-control" placeholder="password" data-bind="value: loginObject.password" />
+                    <button class="btn btn-primary submit-button pull-right" data-bind="click: submitClick">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/Pages/Admin/Login.js"></script>

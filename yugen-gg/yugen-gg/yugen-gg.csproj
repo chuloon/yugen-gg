@@ -248,6 +248,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
@@ -2351,6 +2352,8 @@
     <Content Include="Content\img\register\overwatch.png" />
     <Content Include="Content\img\register\smash.png" />
     <Content Include="Content\stylesheets\about.css" />
+    <Content Include="Content\stylesheets\Admin\index.css" />
+    <Content Include="Content\stylesheets\Admin\login.css" />
     <Content Include="Content\stylesheets\events.css" />
     <Content Include="Content\stylesheets\index.css" />
     <Content Include="Content\stylesheets\layout.css" />
@@ -2765,6 +2768,9 @@
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Register\IPN.cshtml" />
     <Content Include="Views\Payment\PaymentConfirmation.cshtml" />
+    <Content Include="Views\Shared\_AuthLayout.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2779,6 +2785,8 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\Pages\About.ts" />
+    <TypeScriptCompile Include="Scripts\Pages\Admin\Index.ts" />
+    <TypeScriptCompile Include="Scripts\Pages\Admin\Login.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Events.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Index.ts" />
     <TypeScriptCompile Include="Scripts\Pages\PaymentConfirmation.ts" />
