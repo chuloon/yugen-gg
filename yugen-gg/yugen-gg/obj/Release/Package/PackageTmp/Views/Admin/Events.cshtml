@@ -1,0 +1,126 @@
+﻿@{
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+    ViewBag.Title = "Manage Events";
+}
+
+@section AddToHead {
+    <link type="text/css" rel="stylesheet" href="~/Content/stylesheets/admin/event.css" />
+    <script type="text/javascript" src="~/Scripts/knockout.validation.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.3/jquery.mask.js"></script>
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css">
+}
+
+<script>
+    isBusy(false);
+    debugger;
+    if ("@ViewBag.id" != "new-event") {
+        isBusy(true);
+        firebase.database().ref('/events/@ViewBag.id').once('value').then((result) => {
+
+            selectedEvent.date(result.val().date);
+            selectedEvent.entryPrice(result.val().entryPrice);
+            selectedEvent.eventHeader(result.val().eventHeader);
+            selectedEvent.eventThumb(result.val().eventThumb);
+            selectedEvent.games(result.val().games);
+            selectedEvent.id(result.val().id);
+            selectedEvent.locationShort(result.val().locationShort);
+            selectedEvent.longDescription(result.val().longDescription);
+            selectedEvent.name(result.val().name);
+            selectedEvent.orderBy(result.val().orderBy);
+            selectedEvent.time(result.val().time);
+            selectedEvent.venuePrice(result.val().venuePrice);
+
+            isBusy(false);
+        })
+    }
+
+</script>
+
+
+
+<!-- ko if: selectedEvent -->
+<div class="row">
+    <div class="col-md-2 hidden-xs">
+        <a href="javascript:void(0)" data-bind="click: backClick"><i class="mdi mdi-arrow-left-bold-circle-outline mdi-48px"></i></a>
+    </div>
+    <div class="col-xs-12 col-md-4 col-md-offset-2">
+        <div id="selected-event-container" class="panel">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="text" class="alpaca-control form-control event-name" placeholder="event name" data-bind="value: selectedEvent.name" />
+                        <input type="text" class="alpaca-control form-control" placeholder="date" data-bind="value: selectedEvent.date" style="padding-top: 0px;" />
+
+                        <!-- ko if: "@ViewBag.id" == "new-event" -->
+                        <label class="field-label">Unique ID:</label>
+                        <input type="text" class="alpaca-control form-control event-field" placeholder="/Content/img/..." data-bind="value: selectedEvent.id" style="padding-top: 0px;" />
+                        <!-- /ko -->
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label class="field-label">Location: </label>
+                        <input type="text" class="alpaca-control form-control event-field" placeholder="ex) Columbus, OH" data-bind="value: selectedEvent.locationShort" style="padding-top: 0px;" />
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label class="field-label">Venue Fee: </label>
+                        <input id="venue-price" type="text" class="alpaca-control form-control event-field" placeholder="$ XX" data-bind="value: selectedEvent.venuePrice" style="padding-top: 0px;" />
+                    </div>
+
+                    <div class="col-xs-6">
+                        <label class="field-label">Entry Fee: </label>
+                        <input id="entry-price" type="text" class="alpaca-control form-control event-field" placeholder="$ XX" data-bind="value: selectedEvent.entryPrice" style="padding-top: 0px;" />
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label class="field-label">Order By:</label>
+                        <input type="text" class="alpaca-control form-control event-field" placeholder="10" data-bind="value: selectedEvent.orderBy" style="padding-top: 0px;" />
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 10px;">
+                        <label class="field-label">Event Header:</label>
+                        <input type="text" class="alpaca-control form-control event-field" placeholder="/Content/img/..." data-bind="value: selectedEvent.eventHeader" style="padding-top: 0px;" />
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 10px;">
+                        <label class="field-label">Event Thumbnail:</label>
+                        <input type="text" class="alpaca-control form-control event-field" placeholder="/Content/img/..." data-bind="value: selectedEvent.eventThumb" style="padding-top: 0px;" />
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label class="field-label">Games:</label>
+                        <input type="text" class="alpaca-control form-control event-field" placeholder="General, Hearthstone, League, Overwatch, Smash" data-bind="value: selectedEvent.games" style="padding-top: 0px;" />
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label class="field-label">Description (HTML):</label>
+                        <textarea class="description-field" data-bind="value: selectedEvent.longDescription" rows="10"></textarea>
+
+                        <button class="btn btn-primary pull-right" style="margin-top: 10px; border-radius: 0px;" data-bind="click: saveEvent">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
+
+<script src="~/Scripts/Pages/Admin/Events.js"></script>

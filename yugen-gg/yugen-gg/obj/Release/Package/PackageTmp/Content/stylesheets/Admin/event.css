@@ -1,0 +1,16 @@
+﻿#selected-event-container {
+    margin-top: 40px;
+}
+
+.event-name {
+    font-size: 25px;
+}
+
+input.alpaca-control.form-control.event-field {
+    border-bottom-color: #415ba6;
+    max-width: initial;
+}
+
+.description-field {
+    min-width: 100%;
+}

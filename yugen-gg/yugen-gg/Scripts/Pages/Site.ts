@@ -2,6 +2,9 @@
 let eventsArray = ko.observableArray<any>();
 let events = ko.observable();
 
+let registrations = ko.observable<any>();
+let loggedInUser = ko.observable<any>();
+
 function getUrlParams() {
     var vars = [], hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');

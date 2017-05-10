@@ -5,6 +5,7 @@
 
 @section AddToHead {
     <link type="text/css" rel="stylesheet" href="~/Content/stylesheets/admin/index.css" />
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css">
 }
 
 <div id="events-ribbon" class="row">
@@ -12,7 +13,7 @@
     <!-- ko foreach: eventsArray -->
     <div class="col-xs-3">
         <div class="panel">
-            <div class="panel-body event-panel">
+            <div class="panel-body event-panel" data-bind="click: function(){ $parent.selectEvent($data.id) }">
                 <div class="row">
                     <div class="col-xs-4">
                         <img class="img-responsive" height="100" data-bind="attr: { src: $data.eventThumb }" />
@@ -27,6 +28,14 @@
         </div>
     </div>
     <!-- /ko -->
+    <div class="col-xs-1">
+        <div class="panel add-event-panel text-center" data-bind="click: function(){ selectEvent('new-event') }">
+            <div class="panel-body">
+                <h5>Add Event</h5>
+                <i class="mdi mdi-plus mdi-48px"></i>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="row section-separator"></div>
@@ -53,5 +62,9 @@
     <!-- /ko -->
 </div>
 <!-- /ko -->
+
+<div class="row">
+    <div class="col-xs-12"><button class="btn btn-primary signout-button pull-right" data-bind="click: function(){ firebase.auth().signOut(); }">Sign Out</button></div>
+</div>
 
 <script src="~/Scripts/Pages/Admin/Index.js"></script>

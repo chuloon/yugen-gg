@@ -2352,6 +2352,7 @@
     <Content Include="Content\img\register\overwatch.png" />
     <Content Include="Content\img\register\smash.png" />
     <Content Include="Content\stylesheets\about.css" />
+    <Content Include="Content\stylesheets\Admin\event.css" />
     <Content Include="Content\stylesheets\Admin\index.css" />
     <Content Include="Content\stylesheets\Admin\login.css" />
     <Content Include="Content\stylesheets\events.css" />
@@ -2771,6 +2772,7 @@
     <Content Include="Views\Shared\_AuthLayout.cshtml" />
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Events.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2785,8 +2787,10 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\Pages\About.ts" />
+    <TypeScriptCompile Include="Scripts\Pages\Admin\Events.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Admin\Index.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Admin\Login.ts" />
+    <TypeScriptCompile Include="Scripts\Pages\Admin\Site.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Events.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Index.ts" />
     <TypeScriptCompile Include="Scripts\Pages\PaymentConfirmation.ts" />

@@ -16,5 +16,12 @@ namespace yugen_gg.Controllers
         {
             return View();
         }
+
+        public ActionResult Events(string id)
+        {
+            ViewBag.id = id;
+
+            return View();
+        }
     }
 }

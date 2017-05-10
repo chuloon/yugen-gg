@@ -1,7 +1,7 @@
 $().ready(function () {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            window.location.href = "/admin/login";
+            window.location.href = "/admin";
         }
     });
     isBusy(false);

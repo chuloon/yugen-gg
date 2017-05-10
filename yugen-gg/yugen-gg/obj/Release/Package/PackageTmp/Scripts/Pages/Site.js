@@ -1,6 +1,8 @@
 //global params
 var eventsArray = ko.observableArray();
 var events = ko.observable();
+var registrations = ko.observable();
+var loggedInUser = ko.observable();
 function getUrlParams() {
     var vars = [], hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');

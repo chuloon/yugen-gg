@@ -19,8 +19,6 @@ $().ready(function () {
         });
     });
 });
-var registrations = ko.observable();
-var loggedInUser = ko.observable();
 function adminViewModel() {
     this.getRegistrationNumbers = function (eventId) {
         var regCount = 0;
@@ -29,8 +27,13 @@ function adminViewModel() {
             var regGame = $.map(item, function (value, index) { return [value]; });
             regCount += regGame.length;
         });
-        debugger;
         return regCount.toString();
+    };
+    this.selectEvent = function (eventId) {
+        window.location.href = '/admin/events/' + eventId;
+    };
+    this.logout = function () {
+        firebase.auth().signOut();
     };
 }
 ko.applyBindings(new adminViewModel);
