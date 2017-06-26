@@ -249,6 +249,8 @@ function registerViewModel() {
             retObj.price = (eventData().entryPrice + eventData().venuePrice) * 6;
         else if (game == 'general')
             retObj.price = eventData().venuePrice;
+        else if (game == 'smash')
+            retObj.price = eventData().entryPrice + eventData().venuePrice;
         return retObj;
     };
     this.processRegistration = function (data, game) {

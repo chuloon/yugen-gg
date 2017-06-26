@@ -126,18 +126,6 @@
     </div>
 </script>
 
-<script id="smash-form" type="text/html">
-    <div class="row">
-        <div class="col-xs-12 col-md-3">
-            <div class="panel">
-                <div class="panel-body">
-                    <h3 class="secondary-font">We're still finalizing some details on this tournament, so we aren't quite ready for registration on Smash yet!</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</script>
-
 <script id="overwatch-form" type="text/html">
     <div class="row">
         @* Captain Information *@
@@ -555,6 +543,47 @@
         @* Register *@
         <div class="col-xs-12 col-md-3 register-button-container">
             <button class="btn btn-primary highlights-button register-button pull-right" data-bind="click: function() { $data.registerClick('league') }, visible: confirmCheckout() == false">Next</button>
+        </div>
+    </div>
+</script>
+
+<script id="smash-form" type="text/html">
+    <div class="row">
+        @* Basic Information *@
+        <div class="col-xs-12 col-md-3">
+            <div class="panel">
+                <div class="panel-body">
+                    <h3>Basic Information</h3>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <input type="text" class="alpaca-control form-control" placeholder="first name" data-bind="value: smashObject.basicInfo.firstName, disable: confirmCheckout" />
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <input type="text" class="alpaca-control form-control" placeholder="last name" data-bind="value: smashObject.basicInfo.lastName, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input type="text" class="alpaca-control form-control" placeholder="email" data-bind="value: smashObject.basicInfo.email, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input type="text" class="alpaca-control form-control phone-field" placeholder="phone" data-bind="value: smashObject.basicInfo.phone, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8 col-md-offset-2">
+                            <input type="text" class="alpaca-control form-control" placeholder="nickname" data-bind="value: smashObject.basicInfo.nickname, disable: confirmCheckout" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* Register *@
+        <div class="col-xs-12 col-md-3 register-button-container">
+            <button class="btn btn-primary highlights-button register-button pull-right" data-bind="click: function() { $data.registerClick('smash') }, visible: confirmCheckout() == false">Next</button>
         </div>
     </div>
 </script>

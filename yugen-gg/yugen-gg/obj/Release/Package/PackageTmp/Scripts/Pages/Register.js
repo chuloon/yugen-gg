@@ -38,6 +38,17 @@ var generalObject = {
     id: ko.observable(),
     game: 'General'
 };
+var smashObject = {
+    basicInfo: {
+        firstName: ko.observable().extend({ required: true }),
+        lastName: ko.observable().extend({ required: true }),
+        nickname: ko.observable(),
+        email: ko.observable().extend({ required: true, email: true }),
+        phone: ko.observable().extend({ phoneUS: true, required: true }),
+    },
+    id: ko.observable(),
+    game: 'Hearthstone'
+};
 var hearthstoneObject = {
     basicInfo: {
         firstName: ko.observable().extend({ required: true }),
