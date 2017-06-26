@@ -44,6 +44,18 @@ let generalObject = {
     game: 'General'
 }
 
+let smashObject = {
+    basicInfo: {
+        firstName: ko.observable<string>().extend({ required: true }),
+        lastName: ko.observable<string>().extend({ required: true }),
+        nickname: ko.observable<string>(),
+        email: ko.observable<string>().extend({ required: true, email: true }),
+        phone: ko.observable<string>().extend({ phoneUS: true, required: true }),
+    },
+    id: ko.observable<string>(),
+    game: 'Hearthstone'
+}
+
 let hearthstoneObject = {
     basicInfo: {
         firstName: ko.observable<string>().extend({ required: true }),

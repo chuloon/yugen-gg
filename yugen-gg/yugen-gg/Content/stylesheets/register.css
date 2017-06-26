@@ -33,12 +33,12 @@
     max-height: 0px;
 }
 
-#hearthstone-form-container, #league-form-container, #overwatch-form-container, #smash-form-container, #general-form-container {
+#hearthstone-form-container, #league-form-container, #overwatch-form-container, #smash-form-container, #general-form-container, #smash-form {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#hearthstone-form-container input, #league-form-container input, #overwatch-form-container input, #smash-form-container input, #general-form-container input {
+#hearthstone-form-container input, #league-form-container input, #overwatch-form-container input, #smash-form-container input, #general-form-container input, #smash-form input {
     border-bottom-color: #415ba6;
     max-width: initial;
     margin-top: 15px;
