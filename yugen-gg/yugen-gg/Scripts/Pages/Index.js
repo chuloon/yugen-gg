@@ -65,3 +65,4 @@ function indexViewModel() {
     };
 }
 ko.applyBindings(new indexViewModel());
+//# sourceMappingURL=Index.js.map
