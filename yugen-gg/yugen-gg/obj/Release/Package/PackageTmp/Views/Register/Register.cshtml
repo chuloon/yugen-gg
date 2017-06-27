@@ -42,24 +42,28 @@
         <h4 class="game-select-text">Pick a game</h4>
     </div>
     <div class="col-xs-12">
-        <!-- ko foreach: gameList -->
-        <div class="col-xs-12 col-sm-6 col-md-2">
-            <img class="game-select-item" width="100%" data-bind="attr: { src: '/Content/img/register/' + $data + '.png', id: $data + '-item' }, click: function(){ $parent.showForm($data); }" />
+        <div class="game-list-container">
+            <!-- ko foreach: gameList -->
+            <div class="game-list-item" data-bind="attr: { id: $data + '-item' }">
+                <img class="game-select-item" width="100%" data-bind="attr: { src: '/Content/img/register/' + $data + '.png' }, click: function(){ $parent.showForm($data); }" />
+            </div>
+            <!-- /ko -->
         </div>
-        <!-- /ko -->
     </div>
 </div>
 <!-- /ko -->
 
 <div class="row section-separator"></div>
 
-<!-- ko if: selectedGame() -->
-<div id="register-form" class="row" data-bind="css: formVisible() ? 'form-shown' : 'form-hidden'">
+
+<div id="register-form" class="row" data-bind="css: formVisible() ? 'form-shown' : ''">
+    <!-- ko if: selectedGame() -->
     <div class="col-xs-12">
         <div data-bind="template: { name: selectedGame() + '-form' }, attr: { id: selectedGame() + '-form-container' }"></div>
     </div>
+    <!-- /ko -->
 </div>
-<!-- /ko -->
+
 
 <div class="row section-separator"></div>
 

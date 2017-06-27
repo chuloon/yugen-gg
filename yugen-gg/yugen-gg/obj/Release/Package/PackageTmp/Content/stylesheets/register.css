@@ -3,6 +3,18 @@
     padding: 60px
 }
 
+.game-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;}
+
+.game-list-item {
+    width: 15%;
+    margin-right: 40px;
+
+    transition: width 0.5s;
+}
+
 .game-select-text {
     color: white;
     margin-top: -50px;
@@ -10,11 +22,15 @@
 }
 
 .game-item-active {
+    width: 20%;
+}
+
+.game-item-active img {
     filter: grayscale(0%) !important;
 }
 
 .game-select-item {
-    filter: grayscale(70%);
+    filter: grayscale(90%);
     cursor: pointer;
     transition: filter 0.25s;
 }
@@ -25,12 +41,17 @@
 
 #register-form {
     background-color: #ef3b4f;
-    transition: max-height 0.5s;
+    max-height: 0px;
+    transition: max-height 1s 0.1s;
     overflow: hidden;
 }
 
 .form-hidden {
     max-height: 0px;
+}
+
+.form-shown {
+    max-height: 1000px !important;
 }
 
 #hearthstone-form-container, #league-form-container, #overwatch-form-container, #smash-form-container, #general-form-container, #smash-form {

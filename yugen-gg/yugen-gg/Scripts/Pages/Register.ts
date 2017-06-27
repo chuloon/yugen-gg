@@ -161,12 +161,14 @@ let errors = {
     hearthstone: undefined,
     league: undefined,
     overwatch: undefined,
-    general: undefined
+    general: undefined,
+    smash: undefined
 };
 errors.hearthstone = ko.validation.group(hearthstoneObject, { deep: true });
 errors.league = ko.validation.group(leagueObject, { deep: true });
 errors.overwatch = ko.validation.group(overwatchObject, { deep: true });
 errors.general = ko.validation.group(generalObject, { deep: true });
+errors.smash = ko.validation.group(smashObject, { deep: true });
 
 hearthstoneObject.basicInfo.deckClass1.extend({
     validation: {
@@ -268,6 +270,8 @@ function registerViewModel() {
                 this.processRegistration(overwatchObject, game);
             else if (game == 'general')
                 this.processRegistration(generalObject, game);
+            else if (game == 'smash')
+                this.processRegistration(smashObject, game);
         }
         else {
             errors[game].showAllMessages();
@@ -298,7 +302,7 @@ function registerViewModel() {
     this.processRegistration = (data, game) => {
         let returnBool = false;
 
-        data.id(generalObject.basicInfo.firstName() + data.basicInfo.lastName() + Math.floor(Math.random() * 1000 + 1));
+        data.id(data.basicInfo.firstName() + data.basicInfo.lastName() + Math.floor(Math.random() * 1000 + 1));
         self.dataUnwrapped = ko.toJS(data);
 
         try {

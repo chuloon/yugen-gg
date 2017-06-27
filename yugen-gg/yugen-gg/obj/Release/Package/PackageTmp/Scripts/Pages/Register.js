@@ -137,12 +137,14 @@ var errors = {
     hearthstone: undefined,
     league: undefined,
     overwatch: undefined,
-    general: undefined
+    general: undefined,
+    smash: undefined
 };
 errors.hearthstone = ko.validation.group(hearthstoneObject, { deep: true });
 errors.league = ko.validation.group(leagueObject, { deep: true });
 errors.overwatch = ko.validation.group(overwatchObject, { deep: true });
 errors.general = ko.validation.group(generalObject, { deep: true });
+errors.smash = ko.validation.group(smashObject, { deep: true });
 hearthstoneObject.basicInfo.deckClass1.extend({
     validation: {
         validator: function () {
@@ -231,6 +233,8 @@ function registerViewModel() {
                 _this.processRegistration(overwatchObject, game);
             else if (game == 'general')
                 _this.processRegistration(generalObject, game);
+            else if (game == 'smash')
+                _this.processRegistration(smashObject, game);
         }
         else {
             errors[game].showAllMessages();
@@ -249,11 +253,13 @@ function registerViewModel() {
             retObj.price = (eventData().entryPrice + eventData().venuePrice) * 6;
         else if (game == 'general')
             retObj.price = eventData().venuePrice;
+        else if (game == 'smash')
+            retObj.price = eventData().entryPrice + eventData().venuePrice;
         return retObj;
     };
     this.processRegistration = function (data, game) {
         var returnBool = false;
-        data.id(generalObject.basicInfo.firstName() + data.basicInfo.lastName() + Math.floor(Math.random() * 1000 + 1));
+        data.id(data.basicInfo.firstName() + data.basicInfo.lastName() + Math.floor(Math.random() * 1000 + 1));
         self.dataUnwrapped = ko.toJS(data);
         try {
             return firebase.database().ref('/registration/' + eventId()).once('value').then(function (result) {

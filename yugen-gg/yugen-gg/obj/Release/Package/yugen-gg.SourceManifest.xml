@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="C:\Github\yugen-gg\yugen-gg\yugen-gg\obj\Release\Package\PackageTmp" />
-  <setAcl path="C:\Github\yugen-gg\yugen-gg\yugen-gg\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="C:\Github\yugen-gg\yugen-gg\yugen-gg\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="D:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Release\Package\PackageTmp" />
+  <setAcl path="D:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="D:\Yugen\yugen-gg\yugen-gg\yugen-gg\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>
