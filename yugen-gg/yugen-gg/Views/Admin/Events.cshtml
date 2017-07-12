@@ -53,11 +53,20 @@
 
                         <!-- ko if: "@ViewBag.id" == "new-event" -->
                         <label class="field-label">Unique ID:</label>
-                        <input type="text" class="alpaca-control form-control event-field" placeholder="/Content/img/..." data-bind="value: selectedEvent.id" style="padding-top: 0px;" />
+                        <input type="text" class="alpaca-control form-control event-field" placeholder="buckeye-brawl-2017" data-bind="value: selectedEvent.id" style="padding-top: 0px;" />
                         <!-- /ko -->
                     </div>
                 </div>
 
+                <hr />
+                
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label class="field-label">Time: </label>
+                        <input type="text" class="alpaca-control form-control event-field" placeholder="ex) 10a-10p" data-bind="value: selectedEvent.time" style="padding-top: 0px;" />
+                    </div>
+                </div>
+                
                 <hr />
 
                 <div class="row">
