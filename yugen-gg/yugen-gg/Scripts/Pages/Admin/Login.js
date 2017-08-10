@@ -26,4 +26,3 @@ function loginViewModel() {
     };
 }
 ko.applyBindings(new loginViewModel);
-//# sourceMappingURL=Login.js.map

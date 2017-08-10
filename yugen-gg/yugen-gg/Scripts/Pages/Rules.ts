@@ -2,9 +2,19 @@
     isBusy(false);
 });
 
+let leagueReadMore = ko.observable<string>("Read More");
+
 function rulesViewModel() {
-    this.showMore = (id: string) => {
-        $('#' + id).prev().prevObject.addClass("text-expanded");
+
+    this.toggleShow = (id: string) => {
+        if (leagueReadMore() == "Read More") {
+            (<any>$('#' + id)).prev().prevObject.addClass("text-expanded");
+            leagueReadMore("Show Less");
+        }
+        else {
+            (<any>$('#' + id)).prev().prevObject.removeClass("text-expanded");
+            leagueReadMore("Read More");
+        }
     }
 }
 
