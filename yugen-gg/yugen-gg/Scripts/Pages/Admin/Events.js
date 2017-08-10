@@ -41,3 +41,4 @@ function adminEventsViewModel() {
     };
 }
 ko.applyBindings(new adminEventsViewModel);
+//# sourceMappingURL=Events.js.map
