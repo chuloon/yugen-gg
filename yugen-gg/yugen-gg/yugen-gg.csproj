@@ -2361,6 +2361,7 @@
     <Content Include="Content\img\layout\header.jpg" />
     <Content Include="Content\img\layout\logo.png" />
     <Content Include="Content\stylesheets\register.css" />
+    <Content Include="Content\stylesheets\rules.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -2728,6 +2729,7 @@
     <Content Include="Scripts\knockout.validation.js" />
     <Content Include="Scripts\knockout.validation.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\readmore.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -2773,6 +2775,7 @@
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Events.cshtml" />
+    <Content Include="Views\Home\Rules.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2795,6 +2798,7 @@
     <TypeScriptCompile Include="Scripts\Pages\Index.ts" />
     <TypeScriptCompile Include="Scripts\Pages\PaymentConfirmation.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Register.ts" />
+    <TypeScriptCompile Include="Scripts\Pages\Rules.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Site.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout.mapping\knockout.mapping.d.ts" />

@@ -40,6 +40,11 @@ namespace yugen_gg.Controllers
             return View();
         }
 
+        public ActionResult Rules()
+        {
+            return View();
+        }
+
         public class Todo
         {
             public string email { get; set; }
