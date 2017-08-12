@@ -2,18 +2,18 @@
     isBusy(false);
 });
 
-let leagueReadMore = ko.observable<string>("Read More");
-
 function rulesViewModel() {
 
     this.toggleShow = (id: string) => {
-        if (leagueReadMore() == "Read More") {
-            (<any>$('#' + id)).prev().prevObject.addClass("text-expanded");
-            leagueReadMore("Show Less");
+        let collapseArticle = (<any>$('#' + id));
+        if (collapseArticle.prev().hasClass("text-expanded")) {
+            collapseArticle.text("Read More");
+            collapseArticle.prev().removeClass("text-expanded");
+            
         }
         else {
-            (<any>$('#' + id)).prev().prevObject.removeClass("text-expanded");
-            leagueReadMore("Read More");
+            collapseArticle.text("Show Less");
+            collapseArticle.prev().addClass("text-expanded");
         }
     }
 }
