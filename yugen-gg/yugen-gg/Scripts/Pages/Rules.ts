@@ -9,7 +9,6 @@ function rulesViewModel() {
         if (collapseArticle.prev().hasClass("text-expanded")) {
             collapseArticle.text("Read More");
             collapseArticle.prev().removeClass("text-expanded");
-            
         }
         else {
             collapseArticle.text("Show Less");

@@ -1,12 +1,14 @@
 ﻿.text-collapsible {
+    height: inherit;
     overflow: hidden;
     width: 100%;
-    transition: max-height 3s ease;
+    transition: none;
     max-height: 160px;
 }
 
 .text-collapsible.text-expanded {
     max-height: 10000px;
+    transition: max-height 5s ease;
 }
 
 .rules-container {
@@ -14,8 +16,12 @@
     background-color: #1abece;
 }
 
-#rules-container-1 {
-    background-color: #1abece;
+#rules-container-2 {
+    background-color: #fcb437;
+}
+
+#rules-container-2 p {
+    color: black;
 }
 
 article {
@@ -28,9 +34,9 @@ a {
     font-size: 1.2em;
 }
 
-a:hover {
+/*a:hover {
     color: #fcb437;
-}
+}*/
 
 .game-title {
     text-align: center;
@@ -43,3 +49,4 @@ a:hover {
     color: #2a6496;
     text-decoration: underline;
 }
+

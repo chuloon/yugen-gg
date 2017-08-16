@@ -14,6 +14,12 @@ namespace yugen_gg
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Rules",
+                url: "Rules/{id}",
+                defaults: new { controller = "Home", action = "Rules", id = UrlParameter.Optional }
+                );
+
+            routes.MapRoute(
                 name: "Events",
                 url: "Events/{id}",
                 defaults: new { controller = "Home", action = "Events", id = UrlParameter.Optional }
