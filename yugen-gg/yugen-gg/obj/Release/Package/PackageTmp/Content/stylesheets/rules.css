@@ -20,7 +20,7 @@
     background-color: #fcb437;
 }
 
-#rules-container-2 p {
+#rules-container-2 p, #rules-container-2 ul {
     color: black;
 }
 

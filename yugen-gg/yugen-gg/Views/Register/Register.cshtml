@@ -17,6 +17,7 @@
         eventId("@ViewBag.id");
         loadComplete(true);
         isBusy(false);
+        schedule(eventData().schedule);
     })
 </script>
 
@@ -31,10 +32,33 @@
 <h1 data-bind="text: eventData().name"></h1>
 
 <div id="event-info" class="row">
-    <div class="col-xs-12 visible-xs secondary-font event-info-container" data-bind="html: eventData().longDescription"></div>
+    <div class="col-xs-12 col-md-4 secondary-font event-info-container" data-bind="html: eventData().longDescription"></div>
+    <div class="col-xs-12 col-md-8 secondary-font event-schedule-container">
+        <div>
+            <h3 class="schedule-title">Schedule</h3>
+            <span class="schedule-mode" data-bind="text: function(){ return textMode ? 'see text' : 'see chart' }()"></span>
+        </div>
+        <div class="row">
+            <!-- ko foreach: eventData().operatingHours -->
+            <div class="event-hours col-xs-1">
+                <span data-bind="text: $data"></span>
+            </div>
+            <!-- /ko -->
+            
+        </div>
+        <!-- ko foreach: schedule -->
+        <div id="schedule-row">
+            <!-- ko foreach: $data -->
+            <div class="schedule-item" data-bind="style: { marginLeft: 7.6666667*$data.startColumn + '%', display: 'inline-block', width: 7.6666667*$data.hourDuration + '%', marginTop: '5px' }" style="box-shadow: 0 10px 6px -6px #444;">
+                <span data-bind="text: $data.name, style: { backgroundColor: $data.color, display: 'block', paddingLeft: '15px', paddingRight: '15px', paddingTop: '4px', height: '3vh' }"></span>
+            </div>
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    </div>
 </div>
 
-<div class="row section-separator visible-xs"></div>
+<div class="row section-separator"></div>
 
 <!-- ko if: !confirmCheckout()-->
 <div id="game-select" class="row">

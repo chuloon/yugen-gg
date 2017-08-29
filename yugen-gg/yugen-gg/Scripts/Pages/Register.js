@@ -14,6 +14,8 @@ var eventData = ko.observable();
 var loadComplete = ko.observable(false);
 var gameList = ko.observableArray();
 var confirmCheckout = ko.observable(false);
+var schedule = ko.observableArray();
+var textMode = ko.observable(false);
 var eventId = ko.observable();
 var registrationId = ko.observable();
 var formVisible = ko.observable(false);
@@ -289,4 +291,3 @@ function registerViewModel() {
     };
 }
 ko.applyBindings(new registerViewModel());
-//# sourceMappingURL=Register.js.map
