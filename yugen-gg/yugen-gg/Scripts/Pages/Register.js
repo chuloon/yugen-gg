@@ -15,7 +15,8 @@ var loadComplete = ko.observable(false);
 var gameList = ko.observableArray();
 var confirmCheckout = ko.observable(false);
 var schedule = ko.observableArray();
-var textMode = ko.observable(false);
+var scheduleModeText = ko.observable("see text");
+var isScheduleModeText = ko.observable(false);
 var eventId = ko.observable();
 var registrationId = ko.observable();
 var formVisible = ko.observable(false);
@@ -225,6 +226,13 @@ function registerViewModel() {
             $('#' + params + '-item').removeClass('game-item-active');
         }
     };
+    this.changeScheduleMode = function () {
+        isScheduleModeText(!isScheduleModeText());
+        if (isScheduleModeText())
+            scheduleModeText("see chart");
+        else
+            scheduleModeText("see text");
+    };
     this.registerClick = function (game) {
         if (errors[game]().length == 0) {
             if (game == 'hearthstone')
@@ -291,3 +299,4 @@ function registerViewModel() {
     };
 }
 ko.applyBindings(new registerViewModel());
+//# sourceMappingURL=Register.js.map

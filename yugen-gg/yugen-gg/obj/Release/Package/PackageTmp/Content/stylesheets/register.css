@@ -118,6 +118,7 @@
     color: #fff;
     padding-top: 15px;
     padding-bottom: 15px;
+    background-color: #17a9b7
 }
 
 .player-label {
@@ -127,4 +128,32 @@
 
 .team-separator {
     margin-bottom: 0px;
+}
+
+.event-hours {
+    width: 7.66666667% !important;
+    color: white;
+}
+
+.schedule-title {
+    color: #2b4e6f;
+    display: inline-block;
+}
+
+.schedule-mode {
+    color: #2b4e6f;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.schedule-mode:hover {
+    color: white;
+}
+
+.text-schedule {
+    color: white;
+}
+
+.text-schedule-time {
+    color: #2b4e6f;
 }

@@ -18,7 +18,11 @@
         loadComplete(true);
         isBusy(false);
         schedule(eventData().schedule);
-    })
+
+        if ($(window).width() < 768) {
+            isScheduleModeText(true);
+        }
+    });
 </script>
 
 <div id="page-header" class="row">
@@ -36,14 +40,28 @@
     <div class="col-xs-12 col-md-8 secondary-font event-schedule-container">
         <div>
             <h3 class="schedule-title">Schedule</h3>
-            <span class="schedule-mode" data-bind="text: function(){ return textMode ? 'see text' : 'see chart' }()"></span>
+            <span class="schedule-mode" data-bind="text: scheduleModeText, click: changeScheduleMode, css: $(window).width() < 768 ? 'hidden-xs' : ''"></span>
         </div>
+        <!-- ko if: isScheduleModeText -->
+        <!-- ko foreach: eventData().textSchedule -->
+        <div class="row text-schedule">
+            <div class="col-xs-3 col-md-1">
+                <p class="text-schedule-time" data-bind="text: $data.time"></p>
+            </div>
+            <div class="col-xs-9 col-md-4">
+                <p data-bind="text: $data.name"></p>
+            </div>
+        </div>
+        <!-- /ko -->
+        <!-- /ko --><!-- if isschedulemodetext -->
+
+        <!-- ko ifnot: isScheduleModeText -->
         <div class="row">
             <!-- ko foreach: eventData().operatingHours -->
             <div class="event-hours col-xs-1">
                 <span data-bind="text: $data"></span>
             </div>
-            <!-- /ko -->
+            <!-- /ko --> <!-- foreach eventdata().operatinghours -->
             
         </div>
         <!-- ko foreach: schedule -->
@@ -52,9 +70,10 @@
             <div class="schedule-item" data-bind="style: { marginLeft: 7.6666667*$data.startColumn + '%', display: 'inline-block', width: 7.6666667*$data.hourDuration + '%', marginTop: '5px' }" style="box-shadow: 0 10px 6px -6px #444;">
                 <span data-bind="text: $data.name, style: { backgroundColor: $data.color, display: 'block', paddingLeft: '15px', paddingRight: '15px', paddingTop: '4px', height: '3vh' }"></span>
             </div>
-            <!-- /ko -->
+            <!-- /ko --> <!-- foreach $data -->
         </div>
-        <!-- /ko -->
+        <!-- /ko --> <!-- foreach schedule -->
+        <!-- /ko --> <!-- ifnot isschedulemodetext -->
     </div>
 </div>
 
@@ -63,7 +82,7 @@
 <!-- ko if: !confirmCheckout()-->
 <div id="game-select" class="row">
     <div class="col-xs-12">
-        <h4 class="game-select-text">Pick a game</h4>
+        <h4 class="game-select-text">Select Mode</h4>
     </div>
     <div class="col-xs-12">
         <div class="game-list-container">

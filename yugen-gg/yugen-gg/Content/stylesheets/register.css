@@ -149,3 +149,11 @@
 .schedule-mode:hover {
     color: white;
 }
+
+.text-schedule {
+    color: white;
+}
+
+.text-schedule-time {
+    color: #2b4e6f;
+}

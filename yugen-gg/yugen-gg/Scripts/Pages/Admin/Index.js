@@ -37,3 +37,4 @@ function adminViewModel() {
     };
 }
 ko.applyBindings(new adminViewModel);
+//# sourceMappingURL=Index.js.map

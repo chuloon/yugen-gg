@@ -16,7 +16,9 @@ let loadComplete = ko.observable<boolean>(false);
 let gameList = ko.observableArray();
 let confirmCheckout = ko.observable<boolean>(false);
 let schedule = ko.observableArray();
-let textMode = ko.observable<boolean>(false);
+
+let scheduleModeText = ko.observable<string>("see text");
+let isScheduleModeText = ko.observable<boolean>(false);
 
 let eventId = ko.observable<string>();
 let registrationId = ko.observable<string>();
@@ -259,6 +261,15 @@ function registerViewModel() {
         else {
             $('#' + params + '-item').removeClass('game-item-active');
         }
+    }
+
+    this.changeScheduleMode = () => {
+        isScheduleModeText(!isScheduleModeText());
+
+        if (isScheduleModeText())
+            scheduleModeText("see chart");
+        else
+            scheduleModeText("see text");
     }
 
     this.registerClick = (game) => {

@@ -15,3 +15,4 @@ function rulesViewModel() {
     };
 }
 ko.applyBindings(new rulesViewModel());
+//# sourceMappingURL=Rules.js.map

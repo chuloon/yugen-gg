@@ -14,6 +14,9 @@ var eventData = ko.observable();
 var loadComplete = ko.observable(false);
 var gameList = ko.observableArray();
 var confirmCheckout = ko.observable(false);
+var schedule = ko.observableArray();
+var scheduleModeText = ko.observable("see text");
+var isScheduleModeText = ko.observable(false);
 var eventId = ko.observable();
 var registrationId = ko.observable();
 var formVisible = ko.observable(false);
@@ -222,6 +225,13 @@ function registerViewModel() {
         else {
             $('#' + params + '-item').removeClass('game-item-active');
         }
+    };
+    this.changeScheduleMode = function () {
+        isScheduleModeText(!isScheduleModeText());
+        if (isScheduleModeText())
+            scheduleModeText("see chart");
+        else
+            scheduleModeText("see text");
     };
     this.registerClick = function (game) {
         if (errors[game]().length == 0) {
